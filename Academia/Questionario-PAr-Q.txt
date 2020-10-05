@@ -1,0 +1,23 @@
+Questionario PAR-Q
+PAR-Q
+
+1 - Alguma vez um médico lhe disse que você possui um problema do coração e lhe recomendou que só fizesse atividade física sob supervisão médica?
+ Sim        Não
+
+2 - Você sente dor no peito, causada pela prática de atividade física?
+ Sim        Não
+
+3 - Você sentiu dor no peito no último mês?
+ Sim        Não
+
+4 - Você tende a perder a consciência ou cair, como resultado de tonteira ou desmaio?
+ Sim        Não
+
+5 - Você tem algum problema ósseo ou muscular que poderia ser agravado com a prática de atividade física?
+ Sim        Não
+
+6 - Algum médico já lhe recomendou o uso de medicamentos para a sua pressão arterial, para circulação ou coração?
+ Sim        Não
+
+7 - Você tem consciência, através da sua própria experiência ou aconselhamento médico, de alguma outra razão física que impeça sua prática de atividade física sem supervisão médica?
+ Sim        Não
