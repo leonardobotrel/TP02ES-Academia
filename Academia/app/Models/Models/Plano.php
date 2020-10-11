@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plano extends Model
 {
-    use HasFactory;
+    protected $fillable = ['Nome','Url','Preco','Frequencia','Descricao'];
 }
