@@ -57,7 +57,7 @@ RD-02	|
 
 Número |	Benefício |	Valor para o cliente
 --------- | ------ | ------
-1| 		Rapidez no atendimento| 	O Cliente vai poder realizar a sua amtricula em poucos minutos. |
-2	| 	Preservação do meio ambiente | A Academia reduzira o numero de papeis utilizados para cadastro, criacao de fichas de treinos e avaliacao fisica,todas essas poderao ser feitas on line e com a possibilidade de salvar o arquivo em PDF para futuras consultas.
-3	|  Patricidade	| O Cliente ganha mais comodidade e praticidade na academia. Uma vez que ele nao precisara mais de ficar procurandoa sua ficha de exercicios, Ja estara disponivel na palma da mao.
+1| 		Rapidez no atendimento| 	 |
+2	| 	Preservação do meio ambiente | 
+3	|  Patricidade	| 
 
