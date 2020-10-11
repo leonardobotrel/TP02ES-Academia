@@ -1,27 +1,16 @@
-@extends('layouts.app', ['class' => 'register-page', 'page' => __('Register Page'), 'contentClass' => 'register-page'])
+@extends('layouts.app', ['class' => 'register-page', 'page' => __('Página de registro'), 'contentClass' => 'register-page'])
 
 @section('content')
     <div class="row">
         <div class="col-md-5 ml-auto">
-            <div class="info-area info-horizontal mt-5">
-                <div class="icon icon-warning">
-                    <i class="tim-icons icon-wifi"></i>
-                </div>
-                <div class="description">
-                    <h3 class="info-title">{{ __('Marketing') }}</h3>
-                    <p class="description">
-                        {{ __('We\'ve created the marketing campaign of the website. It was a very interesting collaboration.') }}
-                    </p>
-                </div>
-            </div>
             <div class="info-area info-horizontal">
                 <div class="icon icon-primary">
                     <i class="tim-icons icon-triangle-right-17"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Fully Coded in HTML5') }}</h3>
+                    <h3 class="info-title">{{ __('Comece uma nova vida') }}</h3>
                     <p class="description">
-                        {{ __('We\'ve developed the website with HTML5 and CSS3. The client has access to the code using GitHub.') }}
+                        {{ __('Com a melhor infraestrutura e com o que você precisa pra mudar de vida.') }}
                     </p>
                 </div>
             </div>
@@ -30,9 +19,9 @@
                     <i class="tim-icons icon-trophy"></i>
                 </div>
                 <div class="description">
-                    <h3 class="info-title">{{ __('Built Audience') }}</h3>
+                    <h3 class="info-title">{{ __('Temos o melhor serviço') }}</h3>
                     <p class="description">
-                        {{ __('There is also a Fully Customizable CMS Admin Dashboard for this product.') }}
+                        {{ __('Contamos sempre com os melhores profissionais de saúde.') }}
                     </p>
                 </div>
             </div>
@@ -41,19 +30,33 @@
             <div class="card card-register card-white">
                 <div class="card-header">
                     <img class="card-img" src="{{ asset('black') }}/img/card-primary.png" alt="Card image">
-                    <h4 class="card-title">{{ __('Register') }}</h4>
+                    <h4 class="card-title">{{ __('Registre-se') }}</h4>
+                </div>
+                <div class="card-body">
+                    <button type="button" id="cadastrarAluno" onclick="cadastrarAluno()" class="btn btn-primary btn-round btn-lg active" disabled>{{ __('Aluno') }}</button>
+                    <button type="button" id="cadastrarFuncionario" onclick="cadastrarFuncionario()" class="btn btn-primary btn-round btn-lg">{{ __('Funcionario') }}</button>
                 </div>
                 <form class="form" method="post" action="{{ route('register') }}">
                     @csrf
 
                     <div class="card-body">
+                        <div style="display: none;" class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <div class=" form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="tipoPessoa1" name="tipoPessoa" value=1 checked="checked" required/>
+                                <label class="form-check-label">aluno</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="tipoPessoa2" name="tipoPessoa" value=2 require/>
+                                <label class="form-check-label">funcionario</label>
+                            </div>
+                        </div>
                         <div class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <div class="input-group-prepend">
                                 <div class="input-group-text">
                                     <i class="tim-icons icon-single-02"></i>
                                 </div>
                             </div>
-                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Name') }}">
+                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Nome') }}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
                         <div class="input-group{{ $errors->has('email') ? ' has-danger' : '' }}">
@@ -71,7 +74,7 @@
                                     <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
-                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Password') }}">
+                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('Senha') }}">
                             @include('alerts.feedback', ['field' => 'password'])
                         </div>
                         <div class="input-group">
@@ -80,22 +83,38 @@
                                     <i class="tim-icons icon-lock-circle"></i>
                                 </div>
                             </div>
-                            <input type="password" name="password_confirmation" class="form-control" placeholder="{{ __('Confirm Password') }}">
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="{{ __('Confirme a senha') }}">
                         </div>
                         <div class="form-check text-left">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox">
                                 <span class="form-check-sign"></span>
-                                {{ __('I agree to the') }}
-                                <a href="#">{{ __('terms and conditions') }}</a>.
+                                {{ __('Eu concordo com os') }}
+                                <a href="#">{{ __('Termos e condições') }}</a>.
                             </label>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Get Started') }}</button>
+                        <button type="submit" class="btn btn-primary btn-round btn-lg">{{ __('Registrar-se') }}</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <script>
+    function cadastrarAluno() 
+    {
+        document.getElementById("cadastrarAluno").disabled = true;
+        document.getElementById("cadastrarFuncionario").disabled = false;
+        document.getElementById("tipoPessoa1").checked="checked"
+    }
+    function cadastrarFuncionario() 
+    {
+        document.getElementById("cadastrarFuncionario").disabled = true; 
+        document.getElementById("cadastrarAluno").disabled = false;
+        document.getElementById("tipoPessoa2").checked="checked"
+    }
+</script>
 @endsection
+
