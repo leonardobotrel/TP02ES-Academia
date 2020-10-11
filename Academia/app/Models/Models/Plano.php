@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plano extends Model
 {
-    protected $fillable = ['Nome','Url','Preco','Frequencia','Descricao'];
+    protected $fillable = ['Nome','url','preco','Frequencia','descricao'];
 }

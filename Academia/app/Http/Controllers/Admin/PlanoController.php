@@ -7,17 +7,27 @@ use Illuminate\Http\Request;
 
 class PlanoController extends Controller
 {
-    private $repository;
+        private $repository;
     public function __construct(Plano $plan){
 
-        $this->repository = $plan;
+            $this->repository = $plan;
+        }
+    public function index(){
+
+        $planos =$this->repository->paginate();
+
+        return view ('planos',[
+            'planos'=>$planos,
+        ]);
     }
- public function index(){
+    public function criar(){
 
-    $planos =$this->repository->all();
-
-    return view ('planos',[
-        'planos'=>$planos,
-    ]);
- }
+        return view('criar_plano');
+    }
+    public function salvar(Request $request){
+        //dd($request->all());
+        
+         $this->repository->create( $request->all());
+        return redirect()->route('planos.index');
+    }
 }

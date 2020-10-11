@@ -1,5 +1,11 @@
 @extends('layouts.app', ['pageSlug' => 'home'])
-@section('title','PLanos')
+@section('title','Planos')
+
+@section('content_header')
+<h1>Planos <a href="{{route ('planos.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
+@endsection
+
+
 @section('content')
 <div class="card-body">
     <div class="card-header">
@@ -21,9 +27,9 @@
                 @foreach ($planos as $plano)
                 <tr>
                     <td>{{$plano->Nome}}</td>
-                    <td>{{$plano->Frequencia}}</td>
+                    <td> {{$plano->Frequencia}} X</td>
                     <td>{{$plano->descricao}}</td>
-                    <td>{{$plano->preco}}</td>
+                    <td>R$ : {{$plano->preco}}</td>
                     <td><a href="" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
                     
                 </tr>
@@ -32,8 +38,8 @@
             </tbody>
         </table>
     </div>
-    
-</div>
+
+</div>  <!--  <div class="card-footer">{{!!$planos->links()!!}}</div> -->
 @endsection
 
 @push('js')

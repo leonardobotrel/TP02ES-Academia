@@ -8,9 +8,10 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::post('/planos', [App\Http\Controllers\Admin\PlanoController::class, 'salvar'])->name('planos.salvar');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/planos', [App\Http\Controllers\Admin\PlanoController::class, 'index'])->name('planos.index');
+Route::get('/planos_criar', [App\Http\Controllers\Admin\PlanoController::class, 'criar'])->name('planos.criar');
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {

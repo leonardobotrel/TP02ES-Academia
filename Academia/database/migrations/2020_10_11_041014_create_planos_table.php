@@ -16,7 +16,7 @@ class CreatePlanosTable extends Migration
         Schema::create('planos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('Nome');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->integer('Frequencia');
             $table->double('preco',10,2);
             $table->string('descricao')->nullable();
