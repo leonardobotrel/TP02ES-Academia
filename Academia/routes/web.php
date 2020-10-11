@@ -10,7 +10,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/planos', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/planos', [App\Http\Controllers\Admin\PlanoController::class, 'index'])->name('planos.index');
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => 'auth'], function () {
