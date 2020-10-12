@@ -26,6 +26,6 @@ class CreateAvaliacaoClienteParQSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('avaliacao_cliente__par-_q_s');
+        Schema::dropIfExists('avaliacao_cliente__parq_s');
     }
 }

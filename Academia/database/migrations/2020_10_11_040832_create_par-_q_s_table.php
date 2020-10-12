@@ -13,7 +13,7 @@ class CreateParQSTable extends Migration
      */
     public function up()
     {
-        Schema::create('par-_q_s', function (Blueprint $table) {
+        Schema::create('parqs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });

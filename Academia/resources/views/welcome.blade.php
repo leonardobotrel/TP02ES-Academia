@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="header py-7 py-lg-8">
+        <ol class="class-breadcrumb">
+            <li class="bredcrumb-item ">             <a href="{{route('planos.index')}}">Planos</a>             </li>
+        </ol>
         <div class="container">
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
