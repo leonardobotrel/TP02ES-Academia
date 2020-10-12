@@ -30,4 +30,20 @@ class PlanoController extends Controller
          $this->repository->create( $request->all());
         return redirect()->route('planos.index');
     }
+    public function detalhe($id){
+        $plano = $this->repository->where('id', $id)->first();
+      if(!$plano)
+      return redirect()->back();
+        return view('detalhe',[
+            'plano'=>$plano        ]);
+    }
+
+    public function deletar($id){
+        $plano = $this->repository->where('id', $id)->first();
+      if(!$plano)
+         return redirect()->back();
+    $plano->delete();
+    return redirect()->route('planos.index');
+    }
+    
 }

@@ -32,7 +32,7 @@
                     <td>{{$plano->descricao}}</td>
                     <td>R$ : {{$plano->preco}}</td>
                     <td>{{$plano->Periodo}}</td>
-                    <td><a href="" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
+                    <td><a href="{{route('planos.detalhe',$plano->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
                     
                 </tr>
                     
