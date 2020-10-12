@@ -20,6 +20,7 @@
                     <th>Frequencia</th>
                     <th>Descricao</th>
                     <th>Preco</th>
+                    <th>Periodo</th>
                     <th>Acoes</th>
                 </tr>
             </thead>
@@ -30,6 +31,7 @@
                     <td> {{$plano->Frequencia}} X</td>
                     <td>{{$plano->descricao}}</td>
                     <td>R$ : {{$plano->preco}}</td>
+                    <td>{{$plano->Periodo}}</td>
                     <td><a href="" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
                     
                 </tr>
