@@ -9,6 +9,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::delete('/planos_detalhe{id}', [App\Http\Controllers\Admin\PlanoController::class, 'deletar'])->name('planos.deletar');
+Route::any('/pesquisa', [App\Http\Controllers\Admin\PlanoController::class, 'pesquisa'])->name('planos.pesquisa');
 
 Route::get('/planos_detalhe{id}', [App\Http\Controllers\Admin\PlanoController::class, 'detalhe'])->name('planos.detalhe');
 Route::post('/planos', [App\Http\Controllers\Admin\PlanoController::class, 'salvar'])->name('planos.salvar');

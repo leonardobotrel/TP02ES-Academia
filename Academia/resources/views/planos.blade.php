@@ -10,7 +10,14 @@
 <div class="card-body">
     <div class="card-header">
 
-         
+    <form action="{{route('planos.pesquisa')}}"method = "POST" class="form form-inline">
+            @csrf
+        <div class="form-group">
+            <input type="text" name="filter" placeholder="Nome"class="form-control">
+        </div>
+            <button type="submit" class="btn btn-dark" >Pesquisar Plano</button>
+         </form>
+       
     </div>
     <div class="card-body">
         <table class="table table-condensed">

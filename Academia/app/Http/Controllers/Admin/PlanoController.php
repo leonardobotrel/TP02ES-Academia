@@ -45,5 +45,12 @@ class PlanoController extends Controller
     $plano->delete();
     return redirect()->route('planos.index');
     }
-    
+    public function pesquisa(Request $request){
+
+        $planos = $this->repository->pesquisar($request->filter);
+
+        return view('planos',[
+           'planos' => $planos,
+        ]);
+    }
 }
