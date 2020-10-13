@@ -1,23 +1,28 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
+use App\Models\Models\Modalidade;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ModalidadeController extends Controller
 {
     //
+    private $repository;
+    public function __construct(Modalidade $modadelidade){
+
+            $this->repository = $modadelidade;
+        }
     public function index(){
 
-        $modalidades =$this->repository->paginate();
+        $modalidade =$this->repository->paginate();
 
-        return view ('modalidades',[
-            'modalidades'=>$modalidades,
+        return view ('modalidade',[
+            'modalidades'=>$modalidade,
         ]);
     }
     public function criar(){
 
-        return view('modalidades');
+        return view('modalidade');
     }
 }

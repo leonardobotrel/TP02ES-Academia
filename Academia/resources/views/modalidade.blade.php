@@ -2,7 +2,7 @@
 @section('title','Planos')
 
 @section('content_header')
-<h1>Planos <a href="{{route ('modalidades.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
+<h1>Planos <a href="{{route ('modalidade.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
 @endsection
 
 
@@ -15,7 +15,9 @@
         <div class="form-group">
             <input type="text" name="filter" placeholder="Nome"class="form-control">
         </div>
-            <button type="submit" class="btn btn-dark" >Modalidade</button>
+            <button type="submit" class="btn btn-dark" >Pesquisar Modalidade 
+                
+            </button>
          </form>
        
     </div>
@@ -43,7 +45,7 @@
         </table>
     </div>
 
-</div>  <!--  <div class="card-footer">{{!!$planos->links()!!}}</div> -->
+</div>  <!--  <div class="card-footer">{{!!$modalidades->links()!!}}</div> -->
 @endsection
 
 @push('js')
