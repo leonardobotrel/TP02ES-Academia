@@ -17,6 +17,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/planos', [App\Http\Controllers\Admin\PlanoController::class, 'index'])->name('planos.index');
 Route::get('/planos_criar', [App\Http\Controllers\Admin\PlanoController::class, 'criar'])->name('planos.criar');
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
+Route::get('/modalidade', [App\Http\Controllers\Admin\ModalidadeController::class, 'index'])->name('modalidade.index');
+Route::get('/modalidade_criar', [App\Http\Controllers\Admin\ModalidadeController::class, 'criar'])->name('modalidade.criar');
+Route::get('/modalidade_detalhe{id}', [App\Http\Controllers\Admin\ModalidadeController::class, 'detalhe'])->name('modalidade.detalhe');
+Route::any('/modalidade_pesquisa', [App\Http\Controllers\Admin\ModalidadeController::class, 'pesquisa'])->name('modalidade.pesquisa');
+
 
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
