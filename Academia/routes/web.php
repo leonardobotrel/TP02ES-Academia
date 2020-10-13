@@ -17,7 +17,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/planos', [App\Http\Controllers\Admin\PlanoController::class, 'index'])->name('planos.index');
 Route::get('/planos_criar', [App\Http\Controllers\Admin\PlanoController::class, 'criar'])->name('planos.criar');
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
-
+Route::get('/modalidades', [App\Http\Controllers\Admin\ModalidadesController::class, 'index'])->name('modalidades.index');
+Route::get('/modalidades_criar', [App\Http\Controllers\Admin\ModalidadeController::class, 'criar'])->name('modalidades.criar');
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
 		Route::get('maps', ['as' => 'pages.maps', 'uses' => 'App\Http\Controllers\PageController@maps']);
