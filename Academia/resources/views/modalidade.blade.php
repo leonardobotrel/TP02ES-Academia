@@ -28,6 +28,7 @@
                     <th>Nome</th>
                     <th>Capacidade</th>
                   
+
                 </tr>
             </thead>
             <tbody>
@@ -35,7 +36,7 @@
                 <tr>
                     <td>{{$modalidade->Nome}}</td>
                     <td> {{$modalidade->Capacidade}} X</td>
-      
+             
                     <td><a href="{{route('modalidade.detalhe',$plano->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
                     
                 </tr>

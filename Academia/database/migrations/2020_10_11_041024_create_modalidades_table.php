@@ -17,6 +17,7 @@ class CreateModalidadesTable extends Migration
             $table->bigIncrements('id');
             $table->string('Nome');
             $table->integer('Capacidade');
+            $table->integer('QtdTurma');
             $table->timestamps();
         });
     }
