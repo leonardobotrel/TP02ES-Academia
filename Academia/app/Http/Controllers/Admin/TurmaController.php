@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Models\Modalidade;
-class Turma extends Controller
+use App\Models\Models\Turma;
+
+class TurmaController extends Controller
 {
     
     private $repository;
@@ -22,9 +24,10 @@ class Turma extends Controller
         ]);
     }
     public function criar(){
+
         $Modalidade = Modalidade::all();
         return view('criar_turma',[
-            'modalidades' =>$Modalidade,
+            'Modalidades' =>$Modalidade,
         ]);
     }
     public function salvar(Request $request){

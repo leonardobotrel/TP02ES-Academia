@@ -16,8 +16,6 @@ class CreateModalidadesTable extends Migration
         Schema::create('modalidades', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('Nome');
-            $table->integer('Capacidade');
-            $table->integer('QtdTurma');
             $table->timestamps();
         });
     }

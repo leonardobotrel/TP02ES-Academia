@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Turma extends Model
 {
-    protected $fillable = ['Turma','Modalidade','Hora_Inicio','Hora_Inicio','QtdVagasTotal','vagas_restante','Professor','Disponivel'];
+    protected $fillable = ['Turma','Modalidade','Horario_Inicio','Horario_Fim','QtdVagasTotal','Professor','Disponivel'];
 }
