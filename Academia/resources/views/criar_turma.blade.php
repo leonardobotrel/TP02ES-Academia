@@ -31,11 +31,11 @@
             </div>
             <div class="form-group">
                 <label >Horario Inicio</label>
-                <input type="time" name="Horario_Inicio" class="form-control" placeholder="Horario Inicio:" min="06:00" max="20:00" required>>
+                <input type="time" name="Horario_Inicio" class="form-control" placeholder="Horario Inicio:" min="06:00" max="20:00" required>
             </div>
             <div class="form-group">
                 <label >Horario Fim</label> 
-                <input type="time" name="Horario_Fim" class="form-control" placeholder="Horario Termino:" min="07:00" max="20:00" required>>
+                <input type="time" name="Horario_Fim" class="form-control" placeholder="Horario Termino:" min="07:00" max="20:00" required>
             </div>
             <div class="form-group">
                 <label >Professor</label>

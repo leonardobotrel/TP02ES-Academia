@@ -16,7 +16,6 @@ class TurmaController extends Controller
             $this->repository = $turma;
         }
     public function index(){
-
         $turma =$this->repository->paginate();
 
         return view ('turmas',[
@@ -24,15 +23,12 @@ class TurmaController extends Controller
         ]);
     }
     public function criar(){
-
         $Modalidade = Modalidade::all();
         return view('criar_turma',[
             'Modalidades' =>$Modalidade,
         ]);
     }
-    public function salvar(Request $request){
-        //dd($request->all());
-        
+    public function salvar(Request $request){       
          $this->repository->create( $request->all());
         return redirect()->route('turma.index');
     }
