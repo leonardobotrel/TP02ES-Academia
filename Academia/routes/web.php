@@ -25,7 +25,7 @@ Route::get('/planos_criar', [App\Http\Controllers\Admin\PlanoController::class, 
 //Rotas da PAgina Inicial
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+//Rotas para modalidades
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home')->middleware('auth');
 Route::get('/modalidade', [App\Http\Controllers\Admin\ModalidadeController::class, 'index'])->name('modalidade.index');
 Route::get('/modalidade_criar', [App\Http\Controllers\Admin\ModalidadeController::class, 'criar'])->name('modalidade.criar');

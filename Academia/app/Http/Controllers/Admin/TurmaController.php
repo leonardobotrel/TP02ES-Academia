@@ -17,7 +17,6 @@ class TurmaController extends Controller
         }
     public function index(){
         $turma =$this->repository->paginate();
-
         return view ('turmas',[
             'turma'=>$turma,
         ]);
