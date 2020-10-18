@@ -53,18 +53,6 @@
                     <p>{{ __('Alunos') }}</p>
                 </a>
             </li>
-            <li @if ($pageSlug == 'maps') class="active " @endif>
-                <a href="{{ route('turma.index') }}">
-                    <i class="tim-icons icon-bullet-list-67"></i>
-                    <p>{{ __('Realizar Matricula') }}</p>
-                </a>
-            </li>
-            <li @if ($pageSlug == 'maps') class="active " @endif>
-                <a href="{{ route('turma.index') }}">
-                    <i class="tim-icons icon-bullet-list-67"></i>
-                    <p>{{ __('Realizar Exame de Aptidao') }}</p>
-                </a>
-            </li>
         </ul>
     </div>
 </div>

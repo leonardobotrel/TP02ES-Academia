@@ -18,6 +18,7 @@
                     <th>Horario Inicio</th>
                     <th>Horario Fim</th>
                     <th>Capacidade Maxima</th>
+                    <th>Capacidade Ocupada</th>
                     <th>Professor</th>
                     <th>Lotada?</th>
                  
@@ -32,6 +33,7 @@
                     <td>{{$turma->Horario_Inicio}}</td>
                     <td>{{$turma->Horario_Fim}}</td>
                     <td>{{$turma->QtdVagasTotal}}</td>
+                    <td>{{$turma->vagas_ocupadas}}</td>
                     <td>{{$turma->Professor}}</td>
                     <td>{{$turma->Disponivel}}</td>                    
                 </tr>

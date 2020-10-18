@@ -36,9 +36,13 @@
                    <option value="Sexta-Feira"> Sexta-Feira</option>
                     </datalist>
                    
-                  <div class="form-group">
+            <div class="form-group">
                 <label >Quantidade de Vagas:</label>
                 <input type="text" name="QtdVagasTotal" class="form-control" placeholder="Quantidade de Vagas Total:">
+            </div>
+            <div class="form-group">
+                <label >Quantidade de Vagas Ocupadas:</label>
+                <input type="text" name="vagas_ocupadas" class="form-control" placeholder="Quantidade de Vagas vagas_ocupadas:">
             </div>
             <div class="form-group">
                 <label >Horario Inicio</label>
