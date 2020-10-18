@@ -24,6 +24,7 @@ class CreateTurmasTable extends Migration
             $table->integer('vagas_restante')->nullable();//Mostra a quantidade de vagas restantes na turma (total-ocupada)
             $table->string('Professor');//Define qual instrutor sera o orientador da turma
             $table->boolean('Disponivel')->nullable(); //Ira verificar se a turma esta disponivel para cadastro 1 pra sim 1 0 pra nao, caso a turma estiver Lotada, devera ir pra 0
+            $table->string('Dia');
         });
     }
 

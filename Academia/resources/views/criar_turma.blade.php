@@ -25,6 +25,17 @@
                     <label >Numero da Turma:</label>
                     <input type="integer" name="Turma" class="form-control" placeholder="Numero da Turma:">
                 </div>
+                <div class="form-group">
+                    <label for="Dia">Dia</label>
+                    <input  type="text" class="form-control" list="Dia" required name="Dia"placeholder="Entre com o Dia da Semana" >
+                    <datalist id="Dia">
+                    <option value="Segunda-Feira">Segunda-Feira</option>
+                    <option value="Terca-Feira">Terca-FEira</option>
+                    <option value="Quarta-Feira">Quarta-Feira</option>
+                   <option value="Quinta-Feira">Quinta-Feira</option>
+                   <option value="Sexta-Feira"> Sexta-Feira</option>
+                    </datalist>
+                   
                   <div class="form-group">
                 <label >Quantidade de Vagas:</label>
                 <input type="text" name="QtdVagasTotal" class="form-control" placeholder="Quantidade de Vagas Total:">
