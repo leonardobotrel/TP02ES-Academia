@@ -42,11 +42,9 @@ class MatriculaController extends Controller
      */
     public function search(Request $request)
     {
-        $matriculas = $this->repository->search($request->filter);
+        $matricula = $this->repository->pesquisar($request->filter);
 
-        return view('matriculas',[
-           'matriculas' => $matriculas,
-        ]); 
+        return view('matricula',compact('matricula'));
     }
     public function store(Request $request)
     {
@@ -112,7 +110,7 @@ class MatriculaController extends Controller
     $matricula = $this->repository->where('id', $id)->first();
     if(!$matricula)
        return redirect()->back();
-  $matricula->destroy();
-  return redirect()->route('matriculas.index');
+    $matricula->delete();
+    return redirect()->route('matriculas.index');
   }
 }

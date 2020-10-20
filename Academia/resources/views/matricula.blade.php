@@ -11,7 +11,7 @@
 <div class="card-body">
     <div class="card-header">
 
-    <form action="{{route('matriculas.index')}}"method = "POST" class="form form-inline">
+    <form action="{{route('matriculas.search')}}"method = "POST" class="form form-inline">
             @csrf
         <div class="form-group">
             <input type="text" name="filter" placeholder="Nome"class="form-control">
@@ -51,7 +51,7 @@
         </table>
     </div>
 
-</div>  <!--  <div class="card-footer">{{!!$matricula->links()!!}}</div> -->
+</div> <!--  <div class="card-footer">{{!!$matricula->links()!!}}</div> -->
 @endsection
 
 @push('js')

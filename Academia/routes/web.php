@@ -8,8 +8,12 @@ Route::get('/', function () {
 Auth::routes();
 //Rotas para Perfils
 Route::resource('profiles', 'App\Http\Controllers\Admin\ProfileController');
+Route::get('/profiles_detalhe{id}', [App\Http\Controllers\Admin\ProfileController::class, 'detail'])->name('matriculas.detail');
+
 //Rotas Para Matriculas
 Route::resource('matriculas', 'App\Http\Controllers\Admin\MatriculaController');
+Route::get('/matriculas_detalhe{id}', [App\Http\Controllers\Admin\MatriculaController::class, 'detail'])->name('matriculas.detail');
+Route::any('/matricula_pesquisa', [App\Http\Controllers\Admin\MatriculaController::class, 'search'])->name('matriculas.search');
 
 //Rotas de Turmas
 Route::post('/turmas', [App\Http\Controllers\Admin\TurmaController::class, 'salvar'])->name('turma.salvar');

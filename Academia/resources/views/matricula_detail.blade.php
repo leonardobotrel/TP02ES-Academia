@@ -49,7 +49,7 @@
                 <strong>Descricao:</strong>{{$matricula->Nome_Dono_Cartao}}
             </li>
         </ul>
-    <form action="{{route('planos.destroy' ,$matricula->id)}}" method="POST" >
+    <form action="{{route('matriculas.destroy' ,$matricula->id)}}" method="POST" >
         @csrf
             @method('DELETE')
             <button type="submit" class="btn btn -danger">Deletar o matricula      {{$matricula->Nome}}      </button>
