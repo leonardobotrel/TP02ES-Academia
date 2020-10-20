@@ -20,7 +20,7 @@ class CreateMatriculasTable extends Migration
             $table->string('Email');
             $table->string('Telefone');
             $table->string('Bandeira_cartao');
-            $table->string('idExame');
+            $table->integer('idExame');
             $table->string('CPF');
             $table->date('Data_Nascimento');
             $table->integer('Numero_Cartao');

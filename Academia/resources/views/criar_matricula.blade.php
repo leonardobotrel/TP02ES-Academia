@@ -1,13 +1,12 @@
 @extends('layouts.app', ['pageSlug' => 'home'])
 @section('title','Cadastrar Novo modalidade')
 @section('content_header')
-<h1>Cadastrar novo Aluno <a href="{{route ('matricula.salvar')}}" class = "btn btn-dark">Adicionar Aluno </a></h1>
 
 @endsection
 @section('content')
 <div class="card">
     <div class="card-body">
-    <form action="{{route('matricula.salvar')}}" class="form" method='POST'>
+    <form action="{{route('matricula.store')}}" class="form" method='POST'>
             @csrf
             <div class="form-group">
                 <label >Nome:</label>

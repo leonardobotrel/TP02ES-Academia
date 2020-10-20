@@ -12,9 +12,10 @@
 <h1>Perfis <a href="{{route ('profiles.create')}}" class = "btn btn-dark">Adicionar Perfil</a></h1>
 
 <div class="card-body">
+    <!-- 
     <div class="card-header">
 
-    <form action="{{route('planos.index')}}"method = "POST" class="form form-inline">
+   <form action="{{route('planos.index')}}"method = "POST" class="form form-inline">
             @csrf
         <div class="form-group">
             <input type="text" name="filter" placeholder="Nome"class="form-control">
@@ -23,6 +24,7 @@
          </form>
        
     </div>
+-->
     <div class="card-body">
         <table class="table table-condensed">
             <thead>
@@ -38,7 +40,7 @@
                  
                     <td style="width=10px;">
                         
-                        <a href="{{route('planos.detalhe',$profile->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a>
+                       
                         <a href="{{route('profiles.edit',$profile->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Editar</a>
                     </td>
                     
@@ -49,8 +51,7 @@
         </table>
     </div>
 
-</div>
-@endsection
+</div> @endsection
 
 @push('js')
     <script src="{{ asset('black') }}/js/plugins/chartjs.min.js"></script>

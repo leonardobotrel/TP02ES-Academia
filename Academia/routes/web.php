@@ -8,6 +8,9 @@ Route::get('/', function () {
 Auth::routes();
 //Rotas para Perfils
 Route::resource('profiles', 'App\Http\Controllers\Admin\ProfileController');
+//Rotas Para Matriculas
+Route::resource('matriculas', 'App\Http\Controllers\Admin\MatriculaController');
+
 //Rotas de Turmas
 Route::post('/turmas', [App\Http\Controllers\Admin\TurmaController::class, 'salvar'])->name('turma.salvar');
 Route::get('/turmas', [App\Http\Controllers\Admin\TurmaController::class, 'index'])->name('turma.index');
