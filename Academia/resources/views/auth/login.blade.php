@@ -17,14 +17,16 @@
 
                 
                 <div class="card-body">
-                    <div style="display: none;" class="input-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                    <div style="display: none;" class="input-group{{ $errors->has('tipoPessoa') ? ' has-danger' : '' }}">
                         <div class=" form-check form-check-inline">
-                            <input type="radio" class="form-check-input" id="tipoPessoa1" name="tipoPessoa" value=1 checked="checked" required/>
+                            <input type="radio" class="form-check-input form-control{{ $errors->has('tipoPessoa') ? ' is-invalid' : '' }}" id="tipoPessoa1" name="tipoPessoa" value=1 checked="checked" required/>
                             <label class="form-check-label">aluno</label>
+                            @include('alerts.feedback', ['field' => 'tipoPessoa'])
                         </div>
                         <div class="form-check form-check-inline">
-                            <input type="radio" class="form-check-input" id="tipoPessoa2" name="tipoPessoa" value=2 require/>
+                            <input type="radio" class="form-check-input form-control{{ $errors->has('tipoPessoa') ? ' is-invalid' : '' }}" id="tipoPessoa2" name="tipoPessoa" value=2 require/>
                             <label class="form-check-label">funcionario</label>
+                            @include('alerts.feedback', ['field' => 'tipoPessoa'])
                         </div>
                     </div>
 
