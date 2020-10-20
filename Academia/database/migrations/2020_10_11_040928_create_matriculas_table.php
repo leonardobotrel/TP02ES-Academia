@@ -14,7 +14,21 @@ class CreateMatriculasTable extends Migration
     public function up()
     {
         Schema::create('matriculas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('Nome');
+            $table->string('RG');
+            $table->string('Email');
+            $table->string('Telefone');
+            $table->string('Bandeira_cartao');
+            $table->string('idExame');
+            $table->string('CPF');
+            $table->date('Data_Nascimento');
+            $table->integer('Numero_Cartao');
+
+            $table->string('Nome_Dono_Cartao');
+            
+
+            
             $table->timestamps();
         });
     }

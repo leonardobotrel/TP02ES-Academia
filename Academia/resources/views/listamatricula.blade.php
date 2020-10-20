@@ -2,12 +2,11 @@
 @section('title','Planos')
 
 @section('content_header')
+<h1>Planos <a href="{{route ('planos.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
 @endsection
 
 
 @section('content')
-<h1>Planos </h1> <a href="{{route ('planos.criar')}}" class = "btn btn-dark">Adicionar Novo Plano</a>
-
 <div class="card-body">
     <div class="card-header">
 
@@ -38,7 +37,7 @@
                     <td>{{$plano->Nome}}</td>
                     <td> {{$plano->Frequencia}} X</td>
                     <td>{{$plano->descricao}}</td>
-                    <td>R$ : {{$plano->preco}}</td>
+                    <td>{{$plano->preco}}</td>
                     <td>{{$plano->Periodo}}</td>
                     <td><a href="{{route('planos.detalhe',$plano->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
                     

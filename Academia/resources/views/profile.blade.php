@@ -1,23 +1,25 @@
 @extends('layouts.app', ['pageSlug' => 'home'])
-@section('title','Planos')
+@section('title','Profile')
+
 
 @section('content_header')
-<h1>Planos <a href="{{route ('modalidade.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
+
 @endsection
 
 
 @section('content')
+
+<h1>Perfis <a href="{{route ('profiles.create')}}" class = "btn btn-dark">Adicionar Perfil</a></h1>
+
 <div class="card-body">
     <div class="card-header">
 
-    <form action="{{route('modalidade.pesquisa')}}"method = "POST" class="form form-inline">
+    <form action="{{route('planos.index')}}"method = "POST" class="form form-inline">
             @csrf
         <div class="form-group">
             <input type="text" name="filter" placeholder="Nome"class="form-control">
         </div>
-            <button type="submit" class="btn btn-dark" >Pesquisar Modalidade 
-                
-            </button>
+            <button type="submit" class="btn btn-dark" >Pesquisar Perfil</button>
          </form>
        
     </div>
@@ -26,18 +28,19 @@
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Capacidade</th>
-                  
-
+                    <th>Acoes</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($modalidades as $modalidade)
+                @foreach ($profile as $profile)
                 <tr>
-                    <td>{{$modalidade->Nome}}</td>
-                    <td> {{$modalidade->Capacidade}} X</td>
-             
-                    <td><a href="{{route('modalidade.detalhe',$plano->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
+                    <td>{{$profile->Nome}}</td>
+                 
+                    <td style="width=10px;">
+                        
+                        <a href="{{route('planos.detalhe',$profile->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a>
+                        <a href="{{route('profiles.edit',$profile->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Editar</a>
+                    </td>
                     
                 </tr>
                     
@@ -46,7 +49,7 @@
         </table>
     </div>
 
-</div>  <!--  <div class="card-footer">{{!!$modalidades->links()!!}}</div> -->
+</div>
 @endsection
 
 @push('js')
