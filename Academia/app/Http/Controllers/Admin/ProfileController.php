@@ -12,7 +12,7 @@ class ProfileController extends Controller
     public function __construct(Profile $profile){
 
             $this->repository = $profile;
-        }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +20,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $profile = $this->repository->paginate();
+        $profile = $this->repository->latest()->paginate(10);
         return  view('profile',compact('profile'));
     }
 
@@ -45,7 +45,7 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         $this->repository->create($request->all());
-        redirect()-> route('profiles.index');
+         return redirect()->route('profiles.index');
     }
 
     /**
@@ -67,23 +67,23 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        //
+      if (! $profile=$this->repository->find($id))  {
+        return redirect()->back();
+      }
+       return view('profiles_edit',compact('profile'));
     }
     public function detail($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        if (!$profile=$this->repository->find($id))  {
+            return redirect()->back();
+          }
+           $profile->update($request->all());
+           return  redirect()->back('profiles.index');
     }
 
     /**

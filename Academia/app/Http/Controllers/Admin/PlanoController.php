@@ -14,7 +14,7 @@ class PlanoController extends Controller
         }
     public function index(){
 
-        $planos =$this->repository->paginate();
+        $planos =$this->repository->latest()->paginate(10);
 
         return view ('planos',[
             'planos'=>$planos,
