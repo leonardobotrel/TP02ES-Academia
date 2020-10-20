@@ -31,7 +31,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view ('criar_profile');
     }
     public function search(Request $request)
     {
@@ -39,12 +39,13 @@ class ProfileController extends Controller
 
         return view('profiles',[
            'profiles' => $profiles,
-        ]);
+        ]); 
     }
 
     public function store(Request $request)
     {
-        //
+        $this->repository->create($request->all());
+        redirect()-> route('profiles.index');
     }
 
     /**

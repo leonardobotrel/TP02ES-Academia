@@ -3,21 +3,14 @@
 
 
 @section('content_header')
-<ol class="class-breadcrumb">
-    <li class="bredcrumb-item ">             <a href="{{route('planos.index')}}">Planos</a>             </li>
-    <li class="bredcrumb-item ">             <a href="{{route('turma.index')}}">Turmas</a>             </li>
-    <li class="bredcrumb-item ">             <a href="{{route('profiles.index')}}">Perfis </a>             </li>
-    
-</ol>
-<h1>Perfis <a href="{{route ('profiles.create')}}" class = "btn btn-dark">Adicionar Perfil</a></h1>
 
-@stop
-
-@section('content_header')
 @endsection
 
 
 @section('content')
+
+<h1>Perfis <a href="{{route ('profiles.create')}}" class = "btn btn-dark">Adicionar Perfil</a></h1>
+
 <div class="card-body">
     <div class="card-header">
 

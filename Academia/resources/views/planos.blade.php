@@ -2,11 +2,12 @@
 @section('title','Planos')
 
 @section('content_header')
-<h1>Planos <a href="{{route ('planos.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
 @endsection
 
 
 @section('content')
+<h1>Planos </h1> <a href="{{route ('planos.criar')}}" class = "btn btn-dark">Adicionar Novo Plano</a>
+
 <div class="card-body">
     <div class="card-header">
 
