@@ -2,11 +2,12 @@
 @section('title','Turmas')
 
 @section('content_header')
-<h1>Turmas <a href="{{route ('turmas.criar')}}" class = "btn btn-dark">Adicionar Nova Turma</a></h1>
 @endsection
 
 
 @section('content')
+<h1>Turmas <a href="{{route ('turmas.criar')}}" class = "btn btn-dark">Adicionar Nova Turma</a></h1>
+
 <div class="card-body">
        <div class="card-body">
         <table class="table table-condensed">
