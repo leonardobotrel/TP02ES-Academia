@@ -12,11 +12,11 @@
                 </a>
             </li>
             <li @if ($pageSlug == 'profile') class="active " @endif>
-                            <a href="{{ route('profile.edit')  }}">
-                                <i class="tim-icons icon-single-02"></i>
-                                <p>{{ __('Usuário') }}</p>
-                            </a>
-                        </li>
+                <a href="{{ route('profile.edit')  }}">
+                    <i class="tim-icons icon-single-02"></i>
+                    <p>{{ __('Usuário') }}</p>
+                </a>
+            </li>
             <li @if ($pageSlug == 'icons') class="active " @endif>
                 <a href="{{ route('planos.index') }}">
                     <i class="tim-icons icon-atom"></i>
@@ -33,6 +33,12 @@
                 <a href="{{ route('turma.index') }}">
                     <i class="tim-icons icon-bullet-list-67"></i>
                     <p>{{ __('Alunos') }}</p>
+                </a>
+            </li>
+            <li @if ($pageSlug == 'icons') class="active " @endif>
+                <a href="{{ route('aptidaoFisica/index.index') }}">
+                    <i class="tim-icons icon-atom"></i>
+                    <p>{{ __('Exame Médico') }}</p>
                 </a>
             </li>
         </ul>
