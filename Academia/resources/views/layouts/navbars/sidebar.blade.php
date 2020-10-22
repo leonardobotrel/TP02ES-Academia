@@ -1,8 +1,7 @@
 <div class="sidebar">
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="#" class="simple-text logo-mini">{{ __('BD') }}</a>
-            <a href="#" class="simple-text logo-normal">{{ __('Black Dashboard') }}</a>
+            <a href="#" class="simple-text logo-normal">{{ __('Nome Academia') }}</a>
         </div>
         <ul class="nav">
             <li @if ($pageSlug == 'dashboard') class="active " @endif>
@@ -36,9 +35,9 @@
                 </a>
             </li>
             <li @if ($pageSlug == 'icons') class="active " @endif>
-                <a href="{{ route('aptidaoFisica/index.index') }}">
-                    <i class="tim-icons icon-atom"></i>
-                    <p>{{ __('Exame Médico') }}</p>
+                <a href="{{ route('aptidao.index') }}">
+                    <i class="tim-icons icon-notes"></i>
+                    <p>{{ __('Exame Físico') }}</p>
                 </a>
             </li>
         </ul>

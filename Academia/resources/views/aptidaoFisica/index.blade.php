@@ -6,50 +6,39 @@
 
 
 @section('content')
-<h1>Planos </h1> <a href="{{route ('planos.criar')}}" class = "btn btn-dark">Adicionar Novo Plano</a>
+<h1>Exame Físico</h1> 
+<!--<a href="" class = "btn btn-dark">Adicionar Novo Plano</a>-->
 
 <div class="card-body">
-    <div class="card-header">
-
-    <form action="{{route('planos.pesquisa')}}"method = "POST" class="form form-inline">
+    <!--<div class="card-header">
+        <form action=""method = "POST" class="form form-inline">
             @csrf
-        <div class="form-group">
-            <input type="text" name="filter" placeholder="Nome"class="form-control">
-        </div>
+            <div class="form-group">
+                <input type="text" name="filter" placeholder="Nome"class="form-control">
+            </div>
             <button type="submit" class="btn btn-dark" >Pesquisar Plano</button>
-         </form>
-       
-    </div>
+        </form> 
+    </div>-->
     <div class="card-body">
         <table class="table table-condensed">
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Frequencia</th>
-                    <th>Descricao</th>
-                    <th>Preco</th>
-                    <th>Periodo</th>
-                    <th>Acoes</th>
+                    <th>Peso (kg)</th>
+                    <th>Altura (m)</th>
+                    <th>Preção Arterial</th>
+                    <th>Percentual de Gordura</th>
+                    <th>Percentual Massa Magra</th>
+                    <th>IMC</th>
+                    <th>Situação</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach ($planos as $plano)
-                <tr>
-                    <td>{{$plano->Nome}}</td>
-                    <td> {{$plano->Frequencia}} X</td>
-                    <td>{{$plano->descricao}}</td>
-                    <td>R$ : {{$plano->preco}}</td>
-                    <td>{{$plano->Periodo}}</td>
-                    <td><a href="{{route('planos.detalhe',$plano->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
-                    
-                </tr>
-                    
-                @endforeach
-            </tbody>
+            
         </table>
     </div>
 
-</div>  <!--  <div class="card-footer">{{!!$planos->links()!!}}</div> -->
+</div>  
+<!--  <div class="card-footer"></div> -->
 @endsection
 
 @push('js')
