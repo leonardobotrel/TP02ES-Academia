@@ -23,15 +23,16 @@ O documento em questão tem por finalidade apresentar um sistema para uma academ
 
 Número   | Descrição
 --------- | ------
-REQ-01 | O sistema  deverá  possuir  uma  tela  de  login,  contendo  os campos  de  usuário  e  senha
-REQ-02 | 
-REQ-03 | 
-REQ-04 | 
-REQ-05 | 
-REQ-06 | 
-REQ-07 | 
-REQ-08 | 
-REQ-09 | 
+REQ-01 | O sistema  deverá  permitir o cadastro de funcionarios e alunos.
+REQ-02 | O sistema deve permitir que o usuário veja somente aquilo que ele tem permissão.
+REQ-03 | O sistema deve permitir que a secretaria cadastre os dados pessoais do cliente. (nome  completo,  CPF,  identidade  e  data  de  nascimento)
+REQ-04 | O sistema deve permitir que a secretaria cadastre os dados do cartão do cliente. (número  do  cartão e nome do dono, )
+REQ-05 | O sistema deve permitir que a secretaria selecione a modalidade e o tipo de plano do cliente. (mensal,   semestral   ou   anual)
+REQ-06 | O sistema deverá verificar a disponibilidade do dia e horário, de  acordo  com  a  modalidade  pretendida  do  cliente
+REQ-07 | O sistema deve permitir que o professor cadastre  o treino de  cada  aluno
+REQ-08 | O sistema deve exibir o treino e o exame de aptidão física para cada aluno quando este acessar a aplicação.
+REQ-09 | O sistema deve permitir que o médico cadastre o exame de aptidão física de um aluno. (peso, altura,  pressão  arterial,  percentual  de  gordura  no corpo,  percentual  de  massa  magra,  IMC e  situação  do  paciente)
+ 
 
 
 #### 1.2.4.	Relação de Regras de Negócio
