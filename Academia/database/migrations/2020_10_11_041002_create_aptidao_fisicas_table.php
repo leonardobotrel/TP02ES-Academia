@@ -15,7 +15,17 @@ class CreateAptidaoFisicasTable extends Migration
     {
         Schema::create('aptidao_fisicas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user');
+            $table->double('peso');
+            $table->double('altura');
+            $table->string('pressao');
+            $table->integer('gordura');
+            $table->integer('massaMagra');
+            $table->double('imc');
+            $table->integer('habilitado');//1 se não estiver habilitado e 2 caso esteja
             $table->timestamps();
+
+            $table->foreign('user')->references('id')->on('users');
         });
     }
 

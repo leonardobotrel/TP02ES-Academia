@@ -42,7 +42,8 @@ Route::any('/modalidade_pesquisa', [App\Http\Controllers\Admin\ModalidadeControl
 
 //Rotas para exame medico (Aptidao fisica)
 Route::get('/aptidaoFisica/index', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'index'])->name('aptidao.index');
-Route::get('/planos', [App\Http\Controllers\Admin\PlanoController::class, 'index'])->name('planos.index');
+Route::get('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'cadastro'])->name('aptidao.cadastro');
+Route::any('/aptidaoFisica/pesquisa', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'pesquisa'])->name('aptidao.pesquisa');
 
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
