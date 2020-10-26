@@ -23,7 +23,7 @@ O documento em questão tem por finalidade apresentar um sistema para uma academ
 
 Número   | Descrição
 --------- | ------
-REQ-01 | 
+REQ-01 | O sistema  deverá  possuir  uma  tela  de  login,  contendo  os campos  de  usuário  e  senha
 REQ-02 | 
 REQ-03 | 
 REQ-04 | 
