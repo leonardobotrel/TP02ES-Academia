@@ -48,7 +48,7 @@ Rn-06 | **Exame de aptidão:**  O exame de aptidão deve conter ausculta cardior
 #### 1.2.6.	Requisitos de Usabilidade
 Número  |	Descrição
 --------- | ------
-RU-01|
+RU-01| O cliente/funcionário deverá possuir um celular/computador que permita a instalação e boa usabilidade do sistema.
 
 #### 1.2.7.	Requisitos de Desempenho
 Número  |	Descrição
