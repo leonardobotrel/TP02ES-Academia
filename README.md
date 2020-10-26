@@ -38,8 +38,7 @@ REQ-09 | O sistema deve permitir que o médico cadastre o exame de aptidão fís
 #### 1.2.4.	Relação de Regras de Negócio
 Número   | Descrição
 --------- | ------
-RN-01 | **Modalidades oferecidas** 
-A academia deve oferecer ao aluno as modalidades de musculação,   natação, crossfit, ritmos  e spinning.
+RN-01 | **Modalidades oferecidas**  A academia deve oferecer ao aluno as modalidades de musculação,   natação, crossfit, ritmos  e spinning.
 Rn-02 | **Planos**
 Um plano pode ser mensal, semestral ou anual.
 Rn-03 | **Funcionamento**
