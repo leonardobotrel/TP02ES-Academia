@@ -16,7 +16,7 @@ O documento em questão tem por finalidade apresentar um sistema para uma academ
 
 
 #### 1.2.2	Missao do Produto
-
+A missão do produto é agilizar e facilitar a interação do cliente com a academia. Permitindo que os clientes tenham acesso a informação de forma fácil e com que os profissionais possam adcionar informações do cliente de forma prática. 
 
 
 #### 1.2.3.	Relação de Requisitos Funcionais
@@ -53,8 +53,10 @@ RU-01| O cliente/funcionário deverá possuir um celular/computador que permita 
 #### 1.2.7.	Requisitos de Desempenho
 Número  |	Descrição
 --------- | ------
-RD-01	|
-RD-02	|
+RD-01	| O APP deverá funcionar nas seguintes plataformas: Android, IOS e Web.
+RD-02	| Para acessar o Sistema, o cliente/funcionário deverá estar autenticado e ter acesso à internet.
+
+
 #### 1.2.8.	Limites do produto
 
 
@@ -62,7 +64,7 @@ RD-02	|
 
 Número |	Benefício |	Valor para o cliente
 --------- | ------ | ------
-1| 		Rapidez no atendimento| 	 |
-2	| 	Preservação do meio ambiente | 
-3	|  Patricidade	| 
+1| 		Rapidez no atendimento| O cliente, caso escolha utilizar o aplicativo, não precisa ficar esperando que o professor precise dizer qual o próximo aparelho a ser feito.	 
+2	| 	Preservação do meio ambiente | Tanto o cliente quanto a empresa contratante estarão contribuindo para o meio ambiente, pois o aplicativo reduzirá os gastos de papéis em fichas médicas e de treinos
+3	|  Patricidade	| O cliente terá todas informações que precisa de forma fácil.
 
