@@ -38,17 +38,12 @@ REQ-09 | O sistema deve permitir que o médico cadastre o exame de aptidão fís
 #### 1.2.4.	Relação de Regras de Negócio
 Número   | Descrição
 --------- | ------
-RN-01 | **Modalidades oferecidas**  A academia deve oferecer ao aluno as modalidades de musculação,   natação, crossfit, ritmos  e spinning.
-Rn-02 | **Planos**
-Um plano pode ser mensal, semestral ou anual.
-Rn-03 | **Funcionamento**
-A academia deve funcionar de segunda a sexta das 06:30 às 20:00
-Rn-04 | **Musculação**
-A modalidade de musculação é a única que pode ser feita em qualquer horário e dia, as demais deve-se seguir o quadro de horários.
-Rn-05 | **Função professor**
-O professor é responsável por dar aulas e elaborar treinos    individualizados para a musculação.
-Rn-06 | **Exame de aptidão**
-O exame de aptidão deve conter ausculta cardiorrespiratória, aferição da pressão arterial e anamnese (questionário e entrevista) dirigida para a atividade física que pretende praticar.
+RN-01 | **Modalidades oferecidas:**  A academia deve oferecer ao aluno as modalidades de musculação,   natação, crossfit, ritmos  e spinning.
+Rn-02 | **Planos:**  Um plano pode ser mensal, semestral ou anual.
+Rn-03 | **Funcionamento:**  A academia deve funcionar de segunda a sexta das 06:30 às 20:00
+Rn-04 | **Musculação:**  A modalidade de musculação é a única que pode ser feita em qualquer horário e dia, as demais deve-se seguir o quadro de horários.
+Rn-05 | **Função professor:**  O professor é responsável por dar aulas e elaborar treinos    individualizados para a musculação.
+Rn-06 | **Exame de aptidão:**  O exame de aptidão deve conter ausculta cardiorrespiratória, aferição da pressão arterial e anamnese (questionário e entrevista) dirigida para a atividade física que pretende praticar.
 
 #### 1.2.6.	Requisitos de Usabilidade
 Número  |	Descrição
