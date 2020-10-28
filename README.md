@@ -57,10 +57,7 @@ RD-01	| O APP deverá funcionar nas seguintes plataformas: Android, IOS e Web.
 RD-02	| Para acessar o Sistema, o cliente/funcionário deverá estar autenticado e ter acesso à internet.
 
 
-#### 1.2.8.	Limites do produto
-
-
-#### 1.2.9.	Benefícios do produto
+#### 1.2.8.	Benefícios do produto
 
 Número |	Benefício |	Valor para o cliente
 --------- | ------ | ------
@@ -68,3 +65,30 @@ Número |	Benefício |	Valor para o cliente
 2	| 	Preservação do meio ambiente | Tanto o cliente quanto a empresa contratante estarão contribuindo para o meio ambiente, pois o aplicativo reduzirá os gastos de papéis em fichas médicas e de treinos
 3	|  Patricidade	| O cliente terá todas informações que precisa de forma fácil.
 
+### 2 Descrição geral do produto
+
+### 2.1 Perspectiva do produto
+
+## 2.1.1	Lista dos AtoresNúmero |	Benefício |	Valor para o cliente
+--------- | ------ 
+Secretaria| 		Funcionario que estara na entrada da Academia para receber alunos e retirar todas duvidas, dar boas vindas, apresentar a academia,matricula de aluno. 
+Administrador	| Responsavel por criar perfil para novos funcionarios e pode suprir a falta da secretaria,pois tambem podera cadastrar novos alunos,apresentar a academia para novos alunos,etc.
+Professor	|  Responsavel por ministrar aulas em grupos : CrossFit,Natacao ,Spinning e Ritmos e responsavel por criar ficha de musculacao
+Aluno	|  Cliente da academia, e motivo de tudo existir. :)	
+Sistema	|  Responsavel por todo funcionanmento da aplicacao.
+
+## 2.1.2	Diagrama de Caso de Uso
+![Getting Started](DIAGRAMA_CASO_DE_USO.png)
+## 2.1.3	Diagrama de Caso de Uso
+--------- | ------ 
+Código  |	Nome
+CSU-001	| Criar perfil no sitema para funcionario
+CSU-002	| Realizar Matriculas de novos alunos
+CSU-003	| Dar Boas Vindas ao aluno e mostrar a academia.
+CSU-004 | Realizar exame de aptidao Fisica do Aluno.
+CSU-005 | Criar Ficha de Musculacao para Aluno.
+CSU-006	| Identificar por meio da carterinha na portaria da Academia.
+CSU-007 | INtegracao da base de informacao.
+CSU-008 | Verificar Informacoes do Aluno
+CSU-009	| Verificar login no site
+CSU-0010 | Realizar Pagamento
