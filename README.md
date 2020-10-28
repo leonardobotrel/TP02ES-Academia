@@ -83,9 +83,7 @@ Sistema	|  Responsavel por todo funcionanmento da aplicacao.
 ![alt text](https://github.com/leonardobotrel/TP02ES-Academia/blob/main/DIAGRAMA_CASO_DE_USO.PNG)
 ## 2.1.3	Diagrama de Caso de Uso
 Código  |	Nome
-
 --------- | ------ 
-
 CSU-001	| Criar perfil no sitema para funcionario
 CSU-002	| Realizar Matriculas de novos alunos
 CSU-003	| Dar Boas Vindas ao aluno e mostrar a academia.
