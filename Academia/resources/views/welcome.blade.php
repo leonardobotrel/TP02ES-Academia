@@ -17,7 +17,7 @@
                     <div class="col-lg-5 col-md-6">
                         <h1 class="text-white">{{ __('PROPOSITUS!') }}</h1>
                         <p class="text-lead text-light">
-                            {{ __('Use Black Dashboard theme to create a great project.') }}
+                            {{ __('De um novo sentido a sua vida.') }}
                         </p>
                     </div>
                 </div>
