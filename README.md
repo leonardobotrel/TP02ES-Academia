@@ -69,7 +69,8 @@ Número |	Benefício |	Valor para o cliente
 
 ### 2.1 Perspectiva do produto
 
-## 2.1.1	Lista dos AtoresNúmero |	Benefício |	Valor para o cliente
+## 2.1.1	Lista dos Atores
+Nome | 	Descrição
 --------- | ------ 
 Secretaria| 		Funcionario que estara na entrada da Academia para receber alunos e retirar todas duvidas, dar boas vindas, apresentar a academia,matricula de aluno. 
 Administrador	| Responsavel por criar perfil para novos funcionarios e pode suprir a falta da secretaria,pois tambem podera cadastrar novos alunos,apresentar a academia para novos alunos,etc.
@@ -78,7 +79,7 @@ Aluno	|  Cliente da academia, e motivo de tudo existir. :)
 Sistema	|  Responsavel por todo funcionanmento da aplicacao.
 
 ## 2.1.2	Diagrama de Caso de Uso
-![Getting Started](DIAGRAMA_CASO_DE_USO.png)
+
 ![alt text](https://github.com/leonardobotrel/TP02ES-Academia/blob/main/DIAGRAMA_CASO_DE_USO.PNG)
 ## 2.1.3	Diagrama de Caso de Uso
 --------- | ------ 
