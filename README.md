@@ -79,6 +79,7 @@ Sistema	|  Responsavel por todo funcionanmento da aplicacao.
 
 ## 2.1.2	Diagrama de Caso de Uso
 ![Getting Started](DIAGRAMA_CASO_DE_USO.png)
+![alt text](https://github.com/leonardobotrel/TP02ES-Academia/blob/main/DIAGRAMA_CASO_DE_USO.PNG)
 ## 2.1.3	Diagrama de Caso de Uso
 --------- | ------ 
 Código  |	Nome
