@@ -31,6 +31,7 @@
                     <th>Percentual Massa Magra</th>
                     <th>IMC</th>
                     <th>Situação</th>
+                    <th>Deletar</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,6 +45,13 @@
                     <td>{{$aptidao->massaMagra}}</td>
                     <td>{{$aptidao->imc}}</td>
                     <td>{{$aptidao->habilitado}}</td>
+                    <form action="{{route('aptidao.deletar' ,$aptidao->id)}}" method="POST" >
+                        @csrf
+                        @method('DELETE')
+                        <td>
+                            <button type="submit" class="btn btn -danger tim-icons icon-simple-remove"></button>
+                        </td>
+                    </form>
                 </tr>
                 @endforeach
             </tbody>

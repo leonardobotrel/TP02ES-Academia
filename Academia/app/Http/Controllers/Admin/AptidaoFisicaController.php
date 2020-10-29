@@ -35,8 +35,6 @@ class AptidaoFisicaController extends Controller
 
     public function salvar(Request $dados)
     {
-        $aptidaoFisica = $this->repository->latest()->paginate(10);
-
         $add = new AptidaoFisica;
         $add->user = $dados->Nome;
         $add->peso = $dados->Peso;
@@ -48,9 +46,16 @@ class AptidaoFisicaController extends Controller
         $add->habilitado = $dados->Situacao;
         $add->save();
         
-        return view ('aptidaoFisica/index',[
-            'AptidaoFisica'=> $aptidaoFisica,
-        ]);
+        return redirect()->route('aptidao.index');
+    }
+
+    public function deletar($id){
+        $ficha = $this->repository->where('id', $id)->first();
+        if(!$ficha)
+            return redirect()->back();
+        $ficha->delete();
+
+        return redirect()->route('aptidao.index');
     }
 
     public function pesquisa(Request $request){
