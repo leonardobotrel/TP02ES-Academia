@@ -16,6 +16,10 @@ class CreateGradeHorariaAcademiasTable extends Migration
         Schema::create('grade_horaria_academias', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('Modalidade');
+            $table->string('Dias_da_Semana');
+            $table->string('Horarios');
+            
         });
     }
 
