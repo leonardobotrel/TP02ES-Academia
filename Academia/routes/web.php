@@ -39,6 +39,7 @@ Route::get('/modalidade', [App\Http\Controllers\Admin\ModalidadeController::clas
 Route::get('/modalidade_criar', [App\Http\Controllers\Admin\ModalidadeController::class, 'criar'])->name('modalidade.criar');
 Route::get('/modalidade_detalhe{id}', [App\Http\Controllers\Admin\ModalidadeController::class, 'detalhe'])->name('modalidade.detalhe');
 Route::any('/modalidade_pesquisa', [App\Http\Controllers\Admin\ModalidadeController::class, 'pesquisa'])->name('modalidade.pesquisa');
+Route::post('/modalidade', [App\Http\Controllers\Admin\ModalidadeController::class, 'salvar'])->name('modalidade.salvar');
 
 
 Route::group(['middleware' => 'auth'], function () {

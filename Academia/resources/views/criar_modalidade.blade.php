@@ -1,13 +1,13 @@
-@extends('layouts.app', ['pageSlug' => 'home'])
+@extends('layouts.app', ['pageSlug' => 'Criar_modalidade'])
 @section('title','Cadastrar Novo modalidade')
 @section('content_header')
-<h1>Cadastrar novo modalidades <a href="{{route ('modalidades.salvar')}}" class = "btn btn-dark">Adicionar</a></h1>
+<h1>Cadastrar Nova modalidade <a href="{{route ('modalidade.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
 
 @endsection
 @section('content')
 <div class="card">
     <div class="card-body">
-    <form action="{{route('modalidades.salvar')}}" class="form" method='POST'>
+    <form action="{{route('modalidade.salvar')}}" class="form" method='POST'>
             @csrf
             <div class="form-group">
                 <label >Nome:</label>

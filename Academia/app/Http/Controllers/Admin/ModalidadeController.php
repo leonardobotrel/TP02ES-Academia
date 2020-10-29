@@ -9,20 +9,23 @@ class ModalidadeController extends Controller
 {
     //
     private $repository;
-    public function __construct(Modalidade $modadelidade){
+    public function __construct(Modalidade $modalidade){
 
-            $this->repository = $modadelidade;
+            $this->repository = $modalidade;
         }
     public function index(){
-
-        $modalidade =$this->repository->paginate();
-
+        $modalidade =$this->repository->latest()->paginate(10);
         return view ('modalidade',[
-            'modalidades'=>$modalidade,
+            'modalidade'=>$modalidade,
         ]);
     }
     public function criar(){
 
-        return view('modalidade');
+        return view ('criar_modalidade');
+    }
+    public function salvar(Request $request){
+              
+         $this->repository->create( $request->all());
+        return redirect()->route('modalidade.index');
     }
 }

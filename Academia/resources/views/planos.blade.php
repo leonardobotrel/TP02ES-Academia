@@ -33,14 +33,14 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($planos as $plano)
+                @foreach ($planos as $carro)
                 <tr>
-                    <td>{{$plano->Nome}}</td>
-                    <td> {{$plano->Frequencia}} X</td>
-                    <td>{{$plano->descricao}}</td>
-                    <td>R$ : {{$plano->preco}}</td>
-                    <td>{{$plano->Periodo}}</td>
-                    <td><a href="{{route('planos.detalhe',$plano->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
+                    <td>{{$carro->Nome}}</td>
+                    <td> {{$carro->Frequencia}} X</td>
+                    <td>{{$carro->descricao}}</td>
+                    <td>R$ : {{$carro->preco}}</td>
+                    <td>{{$carro->Periodo}}</td>
+                    <td><a href="{{route('planos.detalhe',$carro->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
                     
                 </tr>
                     

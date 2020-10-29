@@ -30,9 +30,21 @@
                 </a>
             </li>
             <li @if ($pageSlug == 'maps') class="active " @endif>
+                <a href="{{ route('profiles.index') }}">
+                    <i class="tim-icons icon-pin"></i>
+                    <p>{{ __('Perfil') }}</p>
+                </a>
+            </li>
+            <li @if ($pageSlug == 'maps') class="active " @endif>
                 <a href="{{ route('turma.index') }}">
                     <i class="tim-icons icon-bullet-list-67"></i>
                     <p>{{ __('Alunos') }}</p>
+                </a>
+            </li>
+            <li @if ($pageSlug == 'maps') class="active " @endif>
+                <a href="{{ route('modalidade.index') }}">
+                    <i class="tim-icons icon-bullet-list-67"></i>
+                    <p>{{ __('Modalidades') }}</p>
                 </a>
             </li>
         </ul>

@@ -1,5 +1,5 @@
-@extends('layouts.app', ['pageSlug' => 'home'])
-@section('title','Planos')
+@extends('layouts.app', ['pageSlug' => 'Modalidade'])
+@section('title','Modalidade')
 
 @section('content_header')
 <h1>Planos <a href="{{route ('modalidade.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
@@ -7,6 +7,8 @@
 
 
 @section('content')
+<h1>Modalidade </h1> <a href="{{route ('modalidade.criar')}}" class = "btn btn-dark">Adicionar Modalidade</a>
+
 <div class="card-body">
     <div class="card-header">
 
@@ -32,12 +34,12 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($modalidades as $modalidade)
+                @foreach ($modalidade  as $carro)
                 <tr>
-                    <td>{{$modalidade->Nome}}</td>
-                    <td> {{$modalidade->Capacidade}} X</td>
+                    <td>{{$carro->Nome}}</td>
+                    <td> {{$carro->Capacidade}} </td>
              
-                    <td><a href="{{route('modalidade.detalhe',$plano->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
+                    <td><a href="{{route('modalidade.detalhe',$carro->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
                     
                 </tr>
                     
@@ -46,7 +48,7 @@
         </table>
     </div>
 
-</div>  <!--  <div class="card-footer">{{!!$modalidades->links()!!}}</div> -->
+</div>  <!--  <div class="card-footer">{{!!$modalidade ?? ''->links()!!}}</div> -->
 @endsection
 
 @push('js')
