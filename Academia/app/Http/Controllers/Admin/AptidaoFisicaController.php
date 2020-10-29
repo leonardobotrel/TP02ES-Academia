@@ -18,21 +18,15 @@ class AptidaoFisicaController extends Controller
 
     public function index()
     {
-        $aptidaoFisica = $this->repository->latest()->paginate(10);
+        $users = User::all();
+        $AptidaoFisica = $this->repository->latest()->paginate(10);
 
-        return view ('aptidaoFisica/index',[
-            'AptidaoFisica'=> $aptidaoFisica,
-          //  'Usuario' => $users,
-        ]);
+        return view ('aptidaoFisica/index', compact('AptidaoFisica', 'users'));
     }
 
     public function cadastro()
     {
         $users = User::all();
-        
-        //Exemplos:
-        //$fichas = $this->repository->latest()->paginate(10);
-        //return view ('aptidaoFisica/cadastro', compact('fichas', 'users'));
 
         return view ('aptidaoFisica/cadastro',[
             'users'=> $users,
@@ -56,7 +50,6 @@ class AptidaoFisicaController extends Controller
         
         return view ('aptidaoFisica/index',[
             'AptidaoFisica'=> $aptidaoFisica,
-          //  'Usuario' => $users,
         ]);
     }
 

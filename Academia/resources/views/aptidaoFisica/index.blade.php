@@ -36,7 +36,7 @@
             <tbody>
                 @foreach ($AptidaoFisica as $aptidao)
                 <tr>
-                    <td>{{$aptidao->user}}</td>
+                    <td>{{$aptidao->usuario->name}}</td>
                     <td>{{$aptidao->peso}}</td>
                     <td>{{$aptidao->altura}}</td>
                     <td>{{$aptidao->pressao}}</td>
