@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PlanoController extends Controller
 {
-        private $repository;
+    private $repository;
     public function __construct(Plano $plan){
 
             $this->repository = $plan;

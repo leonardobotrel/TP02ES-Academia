@@ -60,8 +60,7 @@
                         <div class="sidebar">
                                 <div class="sidebar-wrapper">
                                     <div class="logo">
-                                        <a href="#" class="simple-text logo-mini">{{ _('BD') }}</a>
-                                        <a href="#" class="simple-text logo-normal">{{ _('Black Dashboard') }}</a>
+                                        <a href="#" class="simple-text logo-normal">{{ _('Nome Academia') }}</a>
                                     </div>
                                     <ul class="nav">
                                         <li>
