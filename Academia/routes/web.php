@@ -44,6 +44,7 @@ Route::any('/modalidade_pesquisa', [App\Http\Controllers\Admin\ModalidadeControl
 Route::get('/aptidaoFisica/index', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'index'])->name('aptidao.index');
 Route::get('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'cadastro'])->name('aptidao.cadastro');
 Route::any('/aptidaoFisica/pesquisa', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'pesquisa'])->name('aptidao.pesquisa');
+Route::post('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'salvar'])->name('aptidao.salvar');
 
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);

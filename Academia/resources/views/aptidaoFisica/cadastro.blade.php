@@ -9,15 +9,15 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-    <form action="" class="needs-validation" method='POST' novalidate>
+    <form action="/aptidaoFisica/cadastro" class="needs-validation" method='POST' novalidate>
             {{csrf_field()}}
             <div class="form-group">
                 <div>
                     <label for="nome">Nome:</label>
                 </div>
                 <select name="Nome" list="nomes" class="form-control" placeholder="Nome" required>
-                    @foreach ($Usuarios as $usuario)
-                        <option value="{{$usuario->id}}">{{$usuario->name}}</option>
+                    @foreach ($users as $user)
+                        <option value="{{$user->id}}" style="background-color: 	#BA55D3">{{$user->name}}</option>
                     @endforeach                            
                 </select>
                 <div class="valid-feedback">Válido</div>
