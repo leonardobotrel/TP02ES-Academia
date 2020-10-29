@@ -15,7 +15,7 @@ class CreateAptidaoFisicasTable extends Migration
     {
         Schema::create('aptidao_fisicas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user');
+            $table->unsignedBigInteger('user')->unique();
             $table->double('peso');
             $table->double('altura');
             $table->string('pressao');

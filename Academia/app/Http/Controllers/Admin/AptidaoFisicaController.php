@@ -35,6 +35,14 @@ class AptidaoFisicaController extends Controller
 
     public function salvar(Request $dados)
     {
+        $mensagens = [
+            'Nome.unique' => 'Já existe uma ficha cadastrada para esse usuário.',
+        ];
+
+        $dados->validate([
+            'Nome' => 'unique:aptidao_fisicas,user',
+        ], $mensagens);
+
         $add = new AptidaoFisica;
         $add->user = $dados->Nome;
         $add->peso = $dados->Peso;
@@ -44,6 +52,7 @@ class AptidaoFisicaController extends Controller
         $add->massaMagra = $dados->MassaMagra;
         $add->imc = $dados->IMC;
         $add->habilitado = $dados->Situacao;
+
         $add->save();
         
         return redirect()->route('aptidao.index');

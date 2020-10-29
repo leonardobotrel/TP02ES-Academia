@@ -9,6 +9,16 @@
 @section('content')
 <div class="card">
     <div class="card-body">
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="/aptidaoFisica/cadastro" class="needs-validation" method='POST' novalidate>
             {{csrf_field()}}
             <div class="form-group">
