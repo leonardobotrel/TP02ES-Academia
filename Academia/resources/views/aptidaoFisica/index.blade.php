@@ -1,12 +1,52 @@
 @extends('layouts.app', ['pageSlug' => 'home'])
 @section('title','Ficha Médica')
-
 @section('content_header')
 @endsection
-
-
 @section('content')
 <h1>Exame Físico</h1> 
+@if (Auth::user()->tipoPessoa == 1)
+<div class="card-body">
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Peso (kg)</th>
+                <th>Altura (m)</th>
+                <th>Pressão Arterial</th>
+                <th>Percentual de Gordura (%)</th>
+                <th>Percentual Massa Magra (%)</th>
+                <th>IMC</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($AptidaoFisica as $aptidao)
+                @if ($aptidao->usuario->id == Auth::user()->id)
+                <tr>
+                    <td>{{$aptidao->usuario->name}}</td>
+                    <td>{{$aptidao->peso}}</td>
+                    <td>{{$aptidao->altura}}</td>
+                    <td>{{$aptidao->pressao}}</td>
+                    <td>{{$aptidao->gordura}}</td>
+                    <td>{{$aptidao->massaMagra}}</td>
+                    <td>{{$aptidao->imc}}</td>
+                    <td>
+                        @if($aptidao->habilitado == 1)
+                            {{$aptidao->habilitado = 'Não habilitado'}}
+                        @endif
+                        @if($aptidao->habilitado == 2)
+                            {{$aptidao->habilitado = 'Habilitado'}}
+                        @endif
+                    </td>
+                </tr>
+                @endif
+            @endforeach
+        </tbody>
+    </table>
+</div>
+@endif
+
+@if (Auth::user()->tipoPessoa == 2)    
 <a href="{{route ('aptidao.cadastro')}}" class = "btn btn-dark">Cadastrar Exame</a>
 
 <div class="card-body">
@@ -68,8 +108,8 @@
             </tbody>
         </table>
     </div>
-
 </div>  
+@endif
 <!--  <div class="card-footer"></div> -->
 @endsection
 

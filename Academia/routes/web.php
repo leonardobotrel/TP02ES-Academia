@@ -42,11 +42,13 @@ Route::any('/modalidade_pesquisa', [App\Http\Controllers\Admin\ModalidadeControl
 Route::post('/modalidade', [App\Http\Controllers\Admin\ModalidadeController::class, 'salvar'])->name('modalidade.salvar');
 
 //Rotas para exame medico (Aptidao fisica)
-Route::get('/aptidaoFisica/index', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'index'])->name('aptidao.index');
-Route::get('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'cadastro'])->name('aptidao.cadastro');
-Route::any('/aptidaoFisica/pesquisa', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'pesquisa'])->name('aptidao.pesquisa');
-Route::post('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'salvar'])->name('aptidao.salvar');
-Route::delete('/aptidaoFisica/index{id}', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'deletar'])->name('aptidao.deletar');
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('/aptidaoFisica/index', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'index'])->name('aptidao.index');
+	Route::get('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'cadastro'])->name('aptidao.cadastro');
+	Route::any('/aptidaoFisica/pesquisa', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'pesquisa'])->name('aptidao.pesquisa');
+	Route::post('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'salvar'])->name('aptidao.salvar');
+	Route::delete('/aptidaoFisica/index{id}', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'deletar'])->name('aptidao.deletar');
+});
 
 Route::group(['middleware' => 'auth'], function () {
 		Route::get('icons', ['as' => 'pages.icons', 'uses' => 'App\Http\Controllers\PageController@icons']);
