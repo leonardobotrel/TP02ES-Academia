@@ -9,6 +9,8 @@ class AptidaoFisica extends Model
 {
     protected $table = 'aptidao_fisicas';
 
+    protected $fillable = ['user','peso','altura','pressao','gordura','massaMagra','imc','habilitado'];
+
     public function usuario()
     {
         return $this->belongsTo(User::class, 'user', 'id');
@@ -16,8 +18,8 @@ class AptidaoFisica extends Model
 
     public function pesquisar($filter = null){
         $results = $this
-                        ->where('Nome','LIKE',"%{$filter}%")
+                        ->where('user','LIKE',"%{$filter}%")
                         ->paginate();
-    return $results;
+        return $results;
     }
 }

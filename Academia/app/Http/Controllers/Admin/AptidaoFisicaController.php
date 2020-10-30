@@ -68,11 +68,9 @@ class AptidaoFisicaController extends Controller
     }
 
     public function pesquisa(Request $request){
+        $users = User::all();
+        $AptidaoFisica = $this->repository->pesquisar($request->filter);
 
-        $exames = $this->repository->pesquisar($request->filter);
-
-        return view('aptidaoFisica/pesquisa',[
-           'Exames' => $exames,
-        ]);
+        return view ('aptidaoFisica/index', compact('AptidaoFisica', 'users'));
     }
 }

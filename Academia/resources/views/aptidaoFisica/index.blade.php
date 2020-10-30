@@ -14,7 +14,11 @@
         <form action="{{route('aptidao.pesquisa')}}"method = "POST" class="form form-inline">
             @csrf
             <div class="form-group">
-                <input type="text" name="filter" placeholder="Nome"class="form-control">
+                <select name="filter" list="nomes" class="form-control" placeholder="Nome" style="color: black" required>
+                @foreach ($AptidaoFisica as $aptidao)
+                    <option value="{{$aptidao->user}}" style="background-color: #BA55D3">{{$aptidao->usuario->name}}</option>
+                @endforeach
+                </select>
             </div>
             <button type="submit" class="btn btn-dark" >Pesquisar exame</button>
         </form> 
@@ -27,8 +31,8 @@
                     <th>Peso (kg)</th>
                     <th>Altura (m)</th>
                     <th>Pressão Arterial</th>
-                    <th>Percentual de Gordura</th>
-                    <th>Percentual Massa Magra</th>
+                    <th>Percentual de Gordura (%)</th>
+                    <th>Percentual Massa Magra (%)</th>
                     <th>IMC</th>
                     <th>Situação</th>
                     <th>Deletar</th>
@@ -44,7 +48,14 @@
                     <td>{{$aptidao->gordura}}</td>
                     <td>{{$aptidao->massaMagra}}</td>
                     <td>{{$aptidao->imc}}</td>
-                    <td>{{$aptidao->habilitado}}</td>
+                    <td>
+                        @if($aptidao->habilitado == 1)
+                            {{$aptidao->habilitado = 'Não habilitado'}}
+                        @endif
+                        @if($aptidao->habilitado == 2)
+                            {{$aptidao->habilitado = 'Habilitado'}}
+                        @endif
+                    </td>
                     <form action="{{route('aptidao.deletar' ,$aptidao->id)}}" method="POST" >
                         @csrf
                         @method('DELETE')
