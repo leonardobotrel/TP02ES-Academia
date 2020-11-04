@@ -50,11 +50,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::delete('/aptidaoFisica/index{id}', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'deletar'])->name('aptidao.deletar');
 
 	//Rotas para o treino do aluno
-	Route::get('/Treino/index', [App\Http\Controllers\Admin\TreinoController::class, 'index'])->name('treino.index');
-	Route::get('/Treino/cadastro', [App\Http\Controllers\Admin\TreinoController::class, 'cadastro'])->name('treino.cadastro');
-	Route::any('/Treino/pesquisa', [App\Http\Controllers\Admin\TreinoController::class, 'pesquisa'])->name('treino.pesquisa');
-	Route::post('/Treino/cadastro', [App\Http\Controllers\Admin\TreinoController::class, 'salvar'])->name('treino.salvar');
-	Route::delete('/Treino/index{id}', [App\Http\Controllers\Admin\TreinoController::class, 'deletar'])->name('treino.deletar');
+	Route::get('/treino/index', [App\Http\Controllers\Admin\TreinoController::class, 'index'])->name('treino.index');
+	Route::get('/treino/cadastro', [App\Http\Controllers\Admin\TreinoController::class, 'cadastro'])->name('treino.cadastro');
+	Route::any('/treino/pesquisa', [App\Http\Controllers\Admin\TreinoController::class, 'pesquisa'])->name('treino.pesquisa');
+	Route::post('/treino/cadastro', [App\Http\Controllers\Admin\TreinoController::class, 'salvar'])->name('treino.salvar');
+	Route::delete('/treino/index{id}', [App\Http\Controllers\Admin\TreinoController::class, 'deletar'])->name('treino.deletar');
 });
 
 Route::group(['middleware' => 'auth'], function () {
