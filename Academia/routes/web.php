@@ -41,13 +41,20 @@ Route::get('/modalidade_detalhe{id}', [App\Http\Controllers\Admin\ModalidadeCont
 Route::any('/modalidade_pesquisa', [App\Http\Controllers\Admin\ModalidadeController::class, 'pesquisa'])->name('modalidade.pesquisa');
 Route::post('/modalidade', [App\Http\Controllers\Admin\ModalidadeController::class, 'salvar'])->name('modalidade.salvar');
 
-//Rotas para exame medico (Aptidao fisica)
 Route::group(['middleware' => 'auth'], function () {
+	//Rotas para exame medico (Aptidao fisica)
 	Route::get('/aptidaoFisica/index', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'index'])->name('aptidao.index');
 	Route::get('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'cadastro'])->name('aptidao.cadastro');
 	Route::any('/aptidaoFisica/pesquisa', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'pesquisa'])->name('aptidao.pesquisa');
 	Route::post('/aptidaoFisica/cadastro', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'salvar'])->name('aptidao.salvar');
 	Route::delete('/aptidaoFisica/index{id}', [App\Http\Controllers\Admin\AptidaoFisicaController::class, 'deletar'])->name('aptidao.deletar');
+
+	//Rotas para o treino do aluno
+	Route::get('/Treino/index', [App\Http\Controllers\Admin\TreinoController::class, 'index'])->name('treino.index');
+	Route::get('/Treino/cadastro', [App\Http\Controllers\Admin\TreinoController::class, 'cadastro'])->name('treino.cadastro');
+	Route::any('/Treino/pesquisa', [App\Http\Controllers\Admin\TreinoController::class, 'pesquisa'])->name('treino.pesquisa');
+	Route::post('/Treino/cadastro', [App\Http\Controllers\Admin\TreinoController::class, 'salvar'])->name('treino.salvar');
+	Route::delete('/Treino/index{id}', [App\Http\Controllers\Admin\TreinoController::class, 'deletar'])->name('treino.deletar');
 });
 
 Route::group(['middleware' => 'auth'], function () {
