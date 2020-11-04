@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(AptidaoFisica::class, 'user', 'id');
     }
+    
+    public function fichaTreino()
+    {
+        return $this->hasOne(Treino::class, 'user', 'id');
+    }
 }

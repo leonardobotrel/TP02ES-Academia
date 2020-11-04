@@ -73,7 +73,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($AptidaoFisica as $aptidao)
+                @foreach ($Treinos as $treino)
                 <tr>
                     <td>{{$treino->usuario->name}}</td>
                     <td>{{$treino->peito}}</td>
