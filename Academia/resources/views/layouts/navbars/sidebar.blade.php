@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li @if ($pageSlug ?? '' == 'maps') class="active " @endif>
-                <a href="{{ route('turma.index') }}">
+                <a href="{{ route('matriculas.index') }}">
                     <i class="tim-icons icon-bullet-list-67"></i>
                     <p>{{ __('Alunos') }}</p>
                 </a>

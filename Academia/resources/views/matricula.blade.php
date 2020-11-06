@@ -51,7 +51,7 @@
         </table>
     </div>
 
-</div> <!--  <div class="card-footer">{{!!$matricula->links()!!}}</div> -->
+</div>
 @endsection
 
 @push('js')
