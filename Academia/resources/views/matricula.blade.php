@@ -6,7 +6,7 @@
 
 
 @section('content')
-<h1>Matriculas </h1> <a href="{{route ('matriculas.create')}}" class = "btn btn-dark">Adicionar Matricula</a>
+<h1>Matriculas  Retirar esse botao e colocar na lista de msotra usuarios</h1> <a href="{{route ('matriculas.create')}}" class = "btn btn-dark">Adicionar Matricula</a>
 
 <div class="card-body">
     <div class="card-header">

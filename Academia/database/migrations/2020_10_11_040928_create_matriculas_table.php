@@ -19,16 +19,13 @@ class CreateMatriculasTable extends Migration
             $table->string('RG');
             $table->string('Email');
             $table->string('Telefone');
-            $table->string('Bandeira_cartao');
-            $table->integer('idExame');
-            $table->string('CPF');
+            $table->string('bandeira');
+            $table->integer('idExame')->nullable();
+            $table->integer('CPF');
             $table->date('Data_Nascimento');
             $table->integer('Numero_Cartao');
-
             $table->string('Nome_Dono_Cartao');
-            
 
-            
             $table->timestamps();
         });
     }

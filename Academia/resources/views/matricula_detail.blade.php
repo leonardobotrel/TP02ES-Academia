@@ -13,46 +13,52 @@
             </li>
             
             <li>
-                <strong>Url:</strong>{{$matricula->id}}
+                <strong>ID:</strong>{{$matricula->id}}
             </li>
             
             <li>
-                <strong>Frequencia:</strong>{{$matricula->RG}}
-            </li>
-            
-              
-            <li>
-                <strong>Frequencia:</strong>{{$matricula->Email}}
+                <strong>RG:</strong>{{$matricula->RG}}
             </li>
             
               
             <li>
-                <strong>Frequencia:</strong>{{$matricula->Telefone}}
+                <strong>Email:</strong>{{$matricula->Email}}
+            </li>
+            
+              
+            <li>
+                <strong>Telefone:</strong>{{$matricula->Telefone}}
             </li>
             
             <li>
-                <strong>Periodo:</strong>{{$matricula->cpf}}
+                <strong>CPF:</strong>{{$matricula->CPF}}
             </li>
             <li>
-                <strong>Descricao:</strong>{{$matricula->idExame}}
+                <strong>Id Exame:</strong>{{$matricula->idExame}}
             </li>
             <li>
-                <strong>Descricao:</strong>{{$matricula->Data_Nascimento}}
+                <strong>Data de Nasciment:</strong>{{$matricula->Data_Nascimento}}
             </li>
             <li>
-                <strong>Descricao:</strong>{{$matricula->Numero_Cartao}}
+                <strong>NUmero Cartao:</strong>{{$matricula->Numero_Cartao}}
             </li>
             <li>
-                <strong>Descricao:</strong>{{$matricula->Bandeira_cartao}}
+                <strong>Bandeirao Cartao:</strong>{{$matricula->bandeira}}
             </li>
             <li>
-                <strong>Descricao:</strong>{{$matricula->Nome_Dono_Cartao}}
+                <strong>Nome Dono Cartao:</strong>{{$matricula->Nome_Dono_Cartao}}
             </li>
         </ul>
     <form action="{{route('matriculas.destroy' ,$matricula->id)}}" method="POST" >
         @csrf
             @method('DELETE')
             <button type="submit" class="btn btn -danger">Deletar o matricula      {{$matricula->Nome}}      </button>
+        </form>
+    </div>
+    <form action="{{route('treino.cadastro' ,$matricula->id)}}" method="POST" >
+        @csrf
+            
+            <button type="submit" class="btn btn -danger">Criar Treino de Musculacao para     {{$matricula->Nome}}      </button>
         </form>
     </div>
     <div>
