@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Models\Matricula;
-
+use App\Models\User;
 class MatriculaController extends Controller
 {
     private $repository;
@@ -20,8 +20,9 @@ class MatriculaController extends Controller
      */
     public function index()
     {
+        $users = User::all();
         $matricula = $this->repository->latest()->paginate(10);
-        return  view('matricula',compact('matricula'));
+        return  view('matricula',compact('matricula','users'));
     }
 
     /**

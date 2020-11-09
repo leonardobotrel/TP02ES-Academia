@@ -24,25 +24,19 @@
         <table class="table table-condensed">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>RG</th>
+                    <th>User</th>
                     <th>Email</th>
-                    <th>Telefone</th>
-                    <th>CPF</th>
-                    <th>Data de Nascimento</th>
+                    <th>ID</th>
                     <th>Acoes</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($matricula as $matricula)
+                @foreach ($users as $user)
                 <tr>
-                    <td>{{$matricula->Nome}}</td>
-                    <td>{{$matricula->RG}} </td>
-                    <td>{{$matricula->Email}}</td>
-                    <td>{{$matricula->Telefone}}</td>
-                    <td>{{$matricula->CPF}}</td>
-                    <td>{{$matricula->Data_Nascimento}}</td>
-                    <td><a href="{{route('matriculas.detail',$matricula->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Informacoes</a></td>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->email}} </td>
+                    <td>{{$user->id}}</td>
+                    <td><a href="{{route('matriculas.detail',$matricula->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Matricular</a></td>
                     
                 </tr>
                     

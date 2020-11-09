@@ -24,7 +24,6 @@ class CreateAptidaoFisicasTable extends Migration
             $table->double('imc');
             $table->integer('habilitado');//1 se não estiver habilitado e 2 caso esteja
             $table->timestamps();
-
             $table->foreign('user')->references('id')->on('users');
         });
     }
