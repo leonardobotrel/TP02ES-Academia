@@ -9,19 +9,37 @@
 </ol>
 @stop
 @section('content')
-    <div class="header py-7 py-lg-8">
+    <style>
+        body {
+            position: relative;
+        }
+        body::before {    
+            content: "";
+            background-image: url("{{ asset('black') }}/img/FITNESS(17).png");
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            opacity: 0.2;
+        }
+    </style>
 
-        <div class="container">
-            <div class="header-body text-center mb-7">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5 col-md-6">
-                        <h1 class="text-white">{{ __('PROPOSITUS!') }}</h1>
-                        <p class="text-lead text-light">
-                            {{ __('De um novo sentido a sua vida.') }}
-                        </p>
+    <body>
+        <div class="header py-7 py-lg-8" >
+            <div class="container">
+                <div class="header-body text-center mb-7">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-md-6">
+                            <h1 class="text-white">{{ __('PROPOSITUS!') }}</h1>
+                            <p class="text-lead text-light">
+                                {{ __('De um novo sentido a sua vida.') }}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </body>
 @endsection
