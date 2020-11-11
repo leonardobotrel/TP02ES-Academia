@@ -2,6 +2,7 @@
 @section('title','Cadastrar Novo matricula')
 @section('content_header')
 <h1>Detalhes da Matricula {{$matricula->Nome}}</h1>
+<h1>Realizar Matriculas</h1> <a href="{{route ('matriculas.create')}}" class = "btn btn-dark">Adicionar Matricula</a>
 
 @endsection
 @section('content')

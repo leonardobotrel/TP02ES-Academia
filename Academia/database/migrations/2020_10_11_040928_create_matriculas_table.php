@@ -15,6 +15,7 @@ class CreateMatriculasTable extends Migration
     {
         Schema::create('matriculas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user')->unique();
             $table->string('Nome');
             $table->string('RG');
             $table->string('Email');
@@ -27,6 +28,7 @@ class CreateMatriculasTable extends Migration
             $table->string('Nome_Dono_Cartao');
 
             $table->timestamps();
+            $table->foreign('user')->references('id')->on('users');
         });
     }
 

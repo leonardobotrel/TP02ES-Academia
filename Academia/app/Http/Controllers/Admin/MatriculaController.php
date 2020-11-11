@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Models\Matricula;
 use App\Models\User;
+use App\Models\Models\AptidaoFisica;
 class MatriculaController extends Controller
 {
     private $repository;
@@ -21,8 +22,9 @@ class MatriculaController extends Controller
     public function index()
     {
         $users = User::all();
+        $AptidaoFisica = AptidaoFisica::all();
         $matricula = $this->repository->latest()->paginate(10);
-        return  view('matricula',compact('matricula','users'));
+        return  view('matricula',compact('matricula','users','AptidaoFisica'));
     }
 
     /**
