@@ -15,7 +15,6 @@ class CreateMatriculasTable extends Migration
     {
         Schema::create('matriculas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user')->unique();
             $table->string('Nome');
             $table->string('RG');
             $table->string('Email');
@@ -26,9 +25,11 @@ class CreateMatriculasTable extends Migration
             $table->date('Data_Nascimento');
             $table->integer('Numero_Cartao');
             $table->string('Nome_Dono_Cartao');
-
+            $table->string('logo')->nullable();
+            $table->string('plan_id');
+            $table->boolean('Subscription_suspensded')->default(false);
             $table->timestamps();
-            $table->foreign('user')->references('id')->on('users');
+           //$table->foreign('plan_id')->references('id')->on('planos');// O campo PLan id faz referencia ao campo id da tabela planos
         });
     }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Models\Matricula;
+use App\Models\Models\Plano;
 use App\Models\User;
 use App\Models\Models\AptidaoFisica;
 class MatriculaController extends Controller
@@ -34,7 +35,9 @@ class MatriculaController extends Controller
      */
     public function create()
     {
-        return view ('criar_matricula');
+        $plan = Plano::all();
+        $user = User::all();
+        return view ('criar_matricula', compact('plan','user'));
     }
 
     /**

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plano extends Model
 {
-    protected $fillable = ['Nome','url','preco','Frequencia','descricao','Periodo'];
+    protected $fillable = ['Nome','url','preco','id','Frequencia','descricao','Periodo'];
     public function pesquisar($filter = null){
         $results = $this
                         ->where('Nome','LIKE',"%{$filter}%")

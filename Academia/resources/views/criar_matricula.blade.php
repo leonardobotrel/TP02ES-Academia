@@ -8,10 +8,14 @@
     <div class="card-body">
     <form action="{{route('matriculas.store')}}" class="form" method='POST'>
             @csrf
-            <div class="form-group">
-                <label >Nome Completo:</label>
-                <input type="text" name="Nome" class="form-control" placeholder="Nome:">
+            <div>
+                <label for="nome">Nome:</label>
             </div>
+            <select name="Nome" list="nomes" class="form-control" placeholder="Nome" required>
+                @foreach ($user as $user)
+                    <option value="{{$user->id}}" style="background-color: 	#BA55D3">{{$user->name}}</option>
+                @endforeach                            
+            </select>
             <div class="form-group">
                 <label >CPF:</label>
                 <input type="integer" name="CPF" class="form-control" placeholder="CPF:">
@@ -51,6 +55,17 @@
                 </datalist>
                 <div class="valid-feedback">Válido</div>
                 <div class="invalid-feedback">Por favor preencha este campo</div>
+                <div>
+                    <label for="plan_id">Plano:</label>
+                </div>
+                <select name="plan_id" list="plan_id" class="form-control" placeholder="Plano" required>
+                    @foreach ($plan as $plano)
+                        <option value="{{$plano->Nome}}" style="background-color: 	#BA55D3">{{$plano->Nome}}</option>
+                    @endforeach                            
+                </select>
+                <div class="valid-feedback">Válido</div>
+                <div class="invalid-feedback">Por favor preencha este campo</div>
+            </div>
             <div class="form-group">
                <button type= "submit" class ="btn btn-dark"> Salvar</button>
         </form>

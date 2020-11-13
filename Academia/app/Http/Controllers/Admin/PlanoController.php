@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Models\Models\Plano;
 use App\Http\Controllers\Controller;
+use App\Models\Models\Matricula;
 use Illuminate\Http\Request;
 
 class PlanoController extends Controller
@@ -52,5 +53,8 @@ class PlanoController extends Controller
         return view('planos',[
            'planos' => $planos,
         ]);
+    }
+    public function matriculas(){
+        return $this->hasMany(Matricula::class);
     }
 }

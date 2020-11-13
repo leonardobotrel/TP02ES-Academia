@@ -25,7 +25,7 @@
             <thead>
                 <tr>
                     <th>User</th>
-            
+                    <th>Nome</th>
                     <th>Acoes</th>
                 </tr>
             </thead>
@@ -36,7 +36,8 @@
                  <tr>
                
                     <td>{{$AptidaoFisica->id}}</td>
-                    <td><a href="{{route('matriculas.detail',$AptidaoFisica->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Matricular</a></td>
+                    <td>{{$AptidaoFisica->name}}</td>
+                    <td><a href="{{route('matriculas.create',$AptidaoFisica->id)}}" class="btn btn-outline-success" role="button" aria-pressed="true"> <i class="fas fa-plus"></i>  Matricular</a></td>
                     
                 </tr>
                 @endif

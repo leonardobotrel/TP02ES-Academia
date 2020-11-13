@@ -23,9 +23,9 @@
             {{csrf_field()}}
             <div class="form-group">
                 <div>
-                    <label for="nome">Nome:</label>
+                    <label for="name">Nome:</label>
                 </div>
-                <select name="Nome" list="nomes" class="form-control" placeholder="Nome" required>
+                <select name="name" list="nomes" class="form-control" placeholder="Nome" required>
                     @foreach ($users as $user)
                         <option value="{{$user->id}}" style="background-color: 	#BA55D3">{{$user->name}}</option>
                     @endforeach                            

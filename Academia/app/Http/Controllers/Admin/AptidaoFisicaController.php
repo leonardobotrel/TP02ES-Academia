@@ -44,7 +44,7 @@ class AptidaoFisicaController extends Controller
         ], $mensagens);
 
         $add = new AptidaoFisica;
-        $add->user = $dados->Nome;
+        $add->user = $dados->name;
         $add->peso = $dados->Peso;
         $add->altura = $dados->Altura;
         $add->pressao = $dados->Pressao;
@@ -52,7 +52,7 @@ class AptidaoFisicaController extends Controller
         $add->massaMagra = $dados->MassaMagra;
         $add->imc = $dados->IMC;
         $add->habilitado = $dados->Situacao;
-
+        $add->name = $dados->name;
         $add->save();
         
         return redirect()->route('aptidao.index');
@@ -71,6 +71,6 @@ class AptidaoFisicaController extends Controller
         $users = User::all();
         $AptidaoFisica = $this->repository->pesquisar($request->filter);
 
-        return view ('aptidaoFisica/index', compact('AptidaoFisica', 'users'));
+        return view ('aptidaoFisica/index', compact('AptidaoFisica', 'use'));
     }
 }
