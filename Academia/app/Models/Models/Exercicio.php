@@ -5,7 +5,8 @@ namespace App\Models\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ExercicioPerna extends Model
+class Exercicio extends Model
 {
     use HasFactory;
+    protected $fillable = ['Nome_Exercicio','Repeticao','Sessao','Grupo'];
 }

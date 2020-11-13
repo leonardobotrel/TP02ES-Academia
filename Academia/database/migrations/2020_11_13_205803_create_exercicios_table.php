@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateExercicioGluteosTable extends Migration
+class CreateExerciciosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateExercicioGluteosTable extends Migration
      */
     public function up()
     {
-        Schema::create('exercicio_gluteos', function (Blueprint $table) {
+        Schema::create('exercicios', function (Blueprint $table) {
             $table->id();
+            $table->string('Grupo');
+            $table->string('Nome_Exercicio');
+            $table->integer('Repeticao');
+            $table->integer('Sessao');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateExercicioGluteosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exercicio_gluteos');
+        Schema::dropIfExists('exercicios');
     }
 }

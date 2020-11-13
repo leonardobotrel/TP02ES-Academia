@@ -8,7 +8,12 @@ Route::get('/', function () {
 Auth::routes();
 //Rotas para Perfils
 Route::resource('profiles', 'App\Http\Controllers\Admin\ProfileController');
-Route::get('/profiles_detalhe{id}', [App\Http\Controllers\Admin\ProfileController::class, 'detail'])->name('matriculas.detail');
+Route::get('/profiles_detalhe{id}', [App\Http\Controllers\Admin\ProfileController::class, 'detail'])->name('profiles.detail');
+
+//Rotas para Perfils
+Route::resource('exercicios', 'App\Http\Controllers\Admin\ExercicioController');
+Route::get('/exercicio_detalhe{id}', [App\Http\Controllers\Admin\exercicioController::class, 'detail'])->name('exercicios.detail');
+
 
 //Rotas da PAgina Inicial
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
