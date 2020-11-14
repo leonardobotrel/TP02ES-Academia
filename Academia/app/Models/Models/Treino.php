@@ -9,7 +9,7 @@ class Treino extends Model
 {
     protected $table = 'ficha_treinos';
 
-    protected $fillable = ['user','peito','biceps','triceps','costas','ombros','gluteos','pernas', 'panturrilhas'];
+    protected $fillable = ['user','exercicios'];
 
     public function usuario()
     {

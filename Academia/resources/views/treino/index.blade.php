@@ -9,28 +9,21 @@
     <table class="table table-condensed">
         <thead>
             <tr>
-                <th>Peito</th>
-                <th>Bíceps</th>
-                <th>Tríceps</th>
-                <th>Costas</th>
-                <th>Ombros</th>
-                <th>Glúteos</th>
-                <th>Pernas</th>
-                <th>Panturrilhas</th>
+                <th>Grupo</th>
+                    <th>Nome Exercicios</th>
+                    <th>Sessao</th>
+                    <th>Repeticao</th>
+                    
             </tr>
         </thead>
         <tbody>
-            @foreach ($Treinos as $treino)
-                @if ($treino->usuario->id == Auth::user()->id)
+            @foreach ($Treinos as $Treinos)
+                @if ($Treinos->usuario->id == Auth::user()->id)
                 <tr>
-                    <td>{{$treino->peito}}</td>
-                    <td>{{$treino->biceps}}</td>
-                    <td>{{$treino->triceps}}</td>
-                    <td>{{$treino->costas}}</td>
-                    <td>{{$treino->ombros}}</td>
-                    <td>{{$treino->gluteos}}</td>
-                    <td>{{$treino->pernas}}</td>
-                    <td>{{$treino->panturrilhas}}</td>
+                    <td>{{$Treinos->usuario->Grupo}}</td>
+                    <td>{{$Treinos->usuario->Nome_Exercicio}}</td>
+                    <td>{{$Treinos->usuario->Sessao}}</td>
+                    <td>{{$Treinos->usuario->Repetica}}</td>
                 </tr>
                 @endif
             @endforeach
@@ -60,31 +53,22 @@
         <table class="table table-condensed">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Peito</th>
-                    <th>Bíceps</th>
-                    <th>Tríceps</th>
-                    <th>Costas</th>
-                    <th>Ombros</th>
-                    <th>Glúteos</th>
-                    <th>Pernas</th>
-                    <th>Panturrilhas</th>
+                    <th>Grupo</th>
+                    <th>Nome Exercicios</th>
+                    <th>Sessao</th>
+                    <th>Repeticao</th>
+                    
                     <th>Deletar</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($Treinos as $treino)
+                @foreach ($Treinos as $Treinos)
                 <tr>
-                    <td>{{$treino->usuario->name}}</td>
-                    <td>{{$treino->peito}}</td>
-                    <td>{{$treino->biceps}}</td>
-                    <td>{{$treino->triceps}}</td>
-                    <td>{{$treino->costas}}</td>
-                    <td>{{$treino->ombros}}</td>
-                    <td>{{$treino->gluteos}}</td>
-                    <td>{{$treino->pernas}}</td>
-                    <td>{{$treino->panturrilhas}}</td>
-                    <form action="{{route('treino.deletar' ,$treino->id)}}" method="POST" >
+                    <td>{{$Treinos->usuario->Grupo}}</td>
+                    <td>{{$Treinos->usuario->Nome_Exercicio}}</td>
+                    <td>{{$Treinos->usuario->Sessao}}</td>
+                    <td>{{$Treinos->usuario->Repetica}}</td>
+                    <form action="{{route('treino.deletar' ,$Treinos->id)}}" method="POST" >
                         @csrf
                         @method('DELETE')
                         <td>

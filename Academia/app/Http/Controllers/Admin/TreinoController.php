@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Models\Treino;
 use App\Models\User;
+use App\Models\Models\Exercicio;
 use Illuminate\Database\Eloquent\Collection;
 
 class TreinoController extends Controller
@@ -18,19 +19,18 @@ class TreinoController extends Controller
 
     public function index()
     {
+        $exercicio=Exercicio::all();
         $users = User::all();
         $Treinos = $this->repository->latest()->paginate(10);
-
-        return view ('treino/index', compact('Treinos', 'users'));
+    
+        return view ('treino/index', compact('Treinos', 'users','exercicio'));
     }
 
     public function cadastro()
     {
         $users = User::all();
-
-        return view ('treino/cadastro',[
-            'users'=> $users,
-        ]);
+        $exercicios = Exercicio::all();
+        return view ('treino/cadastro',compact('users','exercicios') );
     }
 
     public function salvar(Request $dados)
@@ -42,20 +42,8 @@ class TreinoController extends Controller
         $dados->validate([
             'Nome' => 'unique:ficha_treinos,user',
         ], $mensagens);
-
-        $add = new Treino;
-        $add->user = $dados->Nome;
-        $add->peito = $dados->peito;
-        $add->biceps = $dados->biceps;
-        $add->triceps = $dados->triceps;
-        $add->costas = $dados->costas;
-        $add->ombros = $dados->ombros;
-        $add->gluteos = $dados->gluteos;
-        $add->pernas = $dados->pernas;
-        $add->panturrilhas = $dados->panturrilhas;
-
-        $add->save();
-        
+        $this->repository->create( $dados->all());
+     
         return redirect()->route('treino.index');
     }
 

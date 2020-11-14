@@ -1,5 +1,5 @@
 @extends('layouts.app', ['pageSlug' => 'home'])
-@section('title','Cadastrar Novo modalidade')
+@section('title','Cadastrar Nova Matricula')
 @section('content_header')
 
 @endsection
