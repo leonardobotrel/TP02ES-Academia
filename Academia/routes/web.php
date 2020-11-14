@@ -7,7 +7,24 @@ Route::get('', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/inicio', function () {
+    return view('inicio');
+});
+Route::get('/contato', function () {
+    return view('contato');
+});
+Route::get('/sobre', function () {
+    return view('sobre');
+});
+Route::get('/galeria', function () {
+    return view('galeria');
+});
+Route::get('/modalidades', function () {
+    return view('modalidades');
+});
+Route::get('/equipe', function () {
+    return view('equipe');
+});
 
 Auth::routes();
 //Rotas para Perfils

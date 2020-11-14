@@ -28,6 +28,57 @@
 
     <body>
         
+		<!-- NAVBAR SECTION -->
+		<div class="navbar-main">
+			<div class="container">
+			    <nav id="navbar-example" class="navbar navbar-expand-lg">
+			        <a class="navbar-brand" href="index.html">
+						<img src="images/logo.png" alt="" />
+					</a>
+			        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			            <span class="navbar-toggler-icon"></span>
+			        </button>
+			        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			            <ul class="navbar-nav ml-auto">
+			            	<li class="nav-item dropdown dmenu">
+			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						          HOME
+						        </a>
+			                    <div class="dropdown-menu">
+			                    	<a class="dropdown-item" href="inicio">O Inicio</a>
+                              
+							    </div>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link" href="#about">Sobre</a>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link" href="#classes">Modalidades</a>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link" href="#trainers">Equipe</a>
+			                </li>
+			                <li class="nav-item">
+			                    <a class="nav-link" href="#gallery">Galeria de Fotos</a>
+			                </li>
+			              
+			                <li class="nav-item">
+			                    <a class="nav-link" href="#contact">Contato</a>
+			                </li>
+
+			            </ul>
+			            <div class="sosmed-icon float-center d-inline-flex">
+							<a href="#"><i class="fa fa-facebook"></i></a> 
+							<a href="#"><i class="fa fa-twitter"></i></a> 
+							<a href="#"><i class="fa fa-instagram"></i></a> 
+						</div>
+			        </div>
+			    </nav> <!-- -->
+
+			</div>
+		</div>
+
+    </div>
         <div class="header py-7 py-lg-8" >
             <div class="container">
                 <div class="header-body text-center mb-7">
