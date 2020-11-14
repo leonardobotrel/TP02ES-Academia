@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+//Rotas Gerais do Site
 Route::get('', function () {
     return view('welcome');
 });
@@ -8,22 +10,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/inicio', function () {
-    return view('inicio');
+    return view('Inicio/inicio');
 });
 Route::get('/contato', function () {
-    return view('contato');
+    return view('Inicio/contato');
 });
 Route::get('/sobre', function () {
-    return view('sobre');
+    return view('Inicio/sobre');
 });
 Route::get('/galeria', function () {
-    return view('galeria');
+    return view('Inicio/galeria');
 });
 Route::get('/modalidades', function () {
-    return view('modalidades');
+    return view('Inicio/modalidades');
 });
 Route::get('/equipe', function () {
-    return view('equipe');
+    return view('Inicio/equipe');
 });
 
 Auth::routes();

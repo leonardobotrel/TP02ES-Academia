@@ -50,20 +50,20 @@
 							    </div>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="#about">Sobre</a>
+			                    <a class="nav-link" href="sobre">Sobre</a>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="#classes">Modalidades</a>
+			                    <a class="nav-link" href="modalidades">Modalidades</a>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="#trainers">Equipe</a>
+			                    <a class="nav-link" href="equipe">Equipe</a>
 			                </li>
 			                <li class="nav-item">
-			                    <a class="nav-link" href="#gallery">Galeria de Fotos</a>
+			                    <a class="nav-link" href="galeria">Galeria de Fotos</a>
 			                </li>
 			              
 			                <li class="nav-item">
-			                    <a class="nav-link" href="#contact">Contato</a>
+			                    <a class="nav-link" href="contato">Contato</a>
 			                </li>
 
 			            </ul>
