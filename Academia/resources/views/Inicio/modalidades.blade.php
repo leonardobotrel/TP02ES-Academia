@@ -20,71 +20,19 @@
 	<!-- HEADER -->
     <div class="header header-1">
 
-		<!-- NAVBAR SECTION -->
-		<div class="navbar-main">
-			<div class="container">
-			    <nav id="navbar-example" class="navbar navbar-expand-lg">
-			        <a class="navbar-brand" href="index.html">
-						<img src="images/logo.png" alt="" />
-					</a>
-			        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			            <span class="navbar-toggler-icon"></span>
-			        </button>
-			        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-			            <ul class="navbar-nav ml-auto">
-			            	<li class="nav-item dropdown dmenu">
-			                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						          HOME
-						        </a>
-			                    <div class="dropdown-menu">
-			                    	<a class="dropdown-item" href="index.html">Home Version 1</a>
-	          						<a class="dropdown-item" href="index-2.html">Home Version 2</a>
-							    </div>
-			                </li>
-			                <li class="nav-item">
-			                    <a class="nav-link" href="about.html">ABOUT US</a>
-			                </li>
-			                <li class="nav-item active">
-			                    <a class="nav-link" href="classes.html">CLASSES</a>
-			                </li>
-			                <li class="nav-item">
-			                    <a class="nav-link" href="trainers.html">TRAINERS</a>
-			                </li>
-			                <li class="nav-item">
-			                    <a class="nav-link" href="gallery.html">GALLERY</a>
-			                </li>
-			                <li class="nav-item">
-			                    <a class="nav-link" href="page-news.html">BLOG</a>
-			                </li>
-			                <li class="nav-item">
-			                    <a class="nav-link" href="contact.html">CONTACT</a>
-			                </li>
-			                
-			            </ul>
-			            <div class="sosmed-icon float-right d-inline-flex">
-							<a href="#"><i class="fa fa-facebook"></i></a> 
-							<a href="#"><i class="fa fa-twitter"></i></a> 
-							<a href="#"><i class="fa fa-instagram"></i></a> 
-						</div>
-			        </div>
-			    </nav> <!-- -->
 
-			</div>
-		</div>
-
-    </div>
 
 	<!-- BANNER -->
 	<div class="section banner-page" data-background="images/dummy-img-1920x300.jpg">
 		<div class="content-wrap pos-relative">
 			<div class="d-flex justify-content-center bd-highlight mb-3">
-				<div class="title-page">CLASSES</div>
+				<div class="title-page">Modalidades</div>
 			</div>
 			<div class="d-flex justify-content-center bd-highlight mb-3">
 			    <nav aria-label="breadcrumb">
 				  <ol class="breadcrumb ">
-				    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-				    <li class="breadcrumb-item active" aria-current="page">Classes</li>
+				    <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
+				    <li class="breadcrumb-item active" aria-current="page">Modalidades</li>
 				  </ol>
 				</nav>
 		  	</div>
@@ -105,7 +53,7 @@
 								<img src="images/dummy-img-600x500.jpg" alt="" class="img-fluid">
 							</div>
 							<div class="body-box">
-								<div class="title">BODY BUILDING CLASSES</div>
+								<div class="title">Ritmos</div>
 								<div class="detail">
 									<div class="col"><i class="fa fa-clock-o"></i> 15:00 PM</div>
 									<div class="col"><i class="fa fa-calendar-o"></i>Mon, Sun, Wed, Fri</div>
@@ -121,7 +69,7 @@
 								<img src="images/dummy-img-600x500.jpg" alt="" class="img-fluid">
 							</div>
 							<div class="body-box">
-								<div class="title">GYM CLASSES</div>
+								<div class="title">Natacao</div>
 								<div class="detail">
 									<div class="col"><i class="fa fa-clock-o"></i> 15:00 PM</div>
 									<div class="col"><i class="fa fa-calendar-o"></i>Mon, Sun, Wed, Fri</div>
@@ -169,7 +117,7 @@
 								<img src="images/dummy-img-600x500.jpg" alt="" class="img-fluid">
 							</div>
 							<div class="body-box">
-								<div class="title">AEROBICS CLASSES</div>
+								<div class="title">CROSS FIT</div>
 								<div class="detail">
 									<div class="col"><i class="fa fa-clock-o"></i> 15:00 PM</div>
 									<div class="col"><i class="fa fa-calendar-o"></i>Mon, Sun, Wed, Fri</div>
@@ -177,25 +125,7 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- Item 6 -->
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<div class="rs-class-box mb-5">
-							<div class="media-box">
-								<img src="images/dummy-img-600x500.jpg" alt="" class="img-fluid">
-							</div>
-							<div class="body-box">
-								<div class="title">BOXING CLASSES</div>
-								<div class="detail">
-									<div class="col"><i class="fa fa-clock-o"></i> 15:00 PM</div>
-									<div class="col"><i class="fa fa-calendar-o"></i>Mon, Sun, Wed, Fri</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
 				</div>
-
 			</div>
 		</div>
 	</div>

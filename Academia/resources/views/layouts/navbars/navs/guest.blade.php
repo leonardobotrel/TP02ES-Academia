@@ -23,6 +23,32 @@
                     </a>
                 </li>
                 <li class="nav-item ">
+                    <a href="inicio" class="nav-link">
+                        <i class="fas fa-home"></i> {{ __('Home') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="equipe" class="nav-link">
+                        <i class="fas fa-users"></i>{{ __(' Equipe') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="galeria" class="nav-link">
+                        <i class="fas fa-images"></i> {{ __('Galeria') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="modalidades" class="nav-link">
+                        <i class="fas fa-align-justify"></i> {{ __('Modalidades') }}
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a href="contato" class="nav-link">
+                        <i class="fas fa-address-card"></i> {{ __('Contato') }}
+                    </a>
+                </li>
+            
+                <li class="nav-item ">
                     <a href="{{ route('register') }}" class="nav-link">
                         <i class="tim-icons icon-laptop"></i> {{ __('Registre-se') }}
                     </a>
@@ -32,6 +58,7 @@
                         <i class="tim-icons icon-single-02"></i> {{ __('Login') }}
                     </a>
                 </li>
+                
             </ul>
         </div>
     </div>
