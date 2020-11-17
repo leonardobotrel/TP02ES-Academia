@@ -9,7 +9,7 @@
     <table class="table table-condensed">
         <thead>
             <tr>
-                <th>Grupo</th>
+                    <th>Grupo</th>
                     <th>Nome Exercicios</th>
                     <th>Sessao</th>
                     <th>Repeticao</th>
@@ -17,14 +17,20 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($Treinos as $Treinos)
-                @if ($Treinos->usuario->id == Auth::user()->id)
-                <tr>
-                    <td>{{$Treinos->usuario->Grupo}}</td>
-                    <td>{{$Treinos->usuario->Nome_Exercicio}}</td>
-                    <td>{{$Treinos->usuario->Sessao}}</td>
-                    <td>{{$Treinos->usuario->Repetica}}</td>
-                </tr>
+            @foreach ($Treinos as $Treino)
+                @if ($Treino->usuario->id == Auth::user()->id)    
+                    @foreach ($Treino->exercicios as $a)
+                      @foreach ($exercicio as $dado)
+                                @if($dado->id==$a)
+                                        <tr>
+                                            <td>{{ $dado->Grupo}}</td>
+                                            <td>{{ $dado->Nome_Exercicio}}</td>
+                                            <td>{{ $dado->Sessao}}</td>
+                                            <td>{{ $dado->Repeticao}}</td>
+                                        </tr>
+                                @endif
+                        @endforeach
+                    @endforeach                
                 @endif
             @endforeach
         </tbody>
@@ -62,9 +68,9 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($Treinos as $Treinos)
+                @foreach ($Treinos->exercicios as $Treinos)
                 <tr>
-                    <td>{{$Treinos->usuario->Grupo}}</td>
+                    <td>{{$exercicio->id->$Treinos}}</td>
                     <td>{{$Treinos->usuario->Nome_Exercicio}}</td>
                     <td>{{$Treinos->usuario->Sessao}}</td>
                     <td>{{$Treinos->usuario->Repetica}}</td>

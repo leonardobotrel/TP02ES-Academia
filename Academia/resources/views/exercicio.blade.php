@@ -28,7 +28,7 @@
     <div class="card-body">
         <table class="table table-condensed">
             <thead>
-                <tr>
+                <tr><th>Grupo</th>
                     <th>Nome</th>
                     <th>Sessoes</th>
                     <th>Repeticao</th>
@@ -38,6 +38,7 @@
             <tbody>
                 @foreach ($exercicio as $exercicios)
                 <tr>
+                    <td>{{$exercicios->Grupo}}</td>
                     <td>{{$exercicios->Nome_Exercicio}}</td>
                     <td>{{$exercicios->Sessao}}</td>
                     <td>{{$exercicios->Repeticao}}</td>

@@ -16,7 +16,7 @@ class CreateFichaTreinosTable extends Migration
         Schema::create('ficha_treinos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user')->unique();
-            $table->string('Exercicios')->nullable();
+            $table->json('exercicios')->nullable();
             $table->foreign('user')->references('id')->on('users');
             $table->timestamps();
         });

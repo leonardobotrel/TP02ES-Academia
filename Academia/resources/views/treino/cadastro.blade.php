@@ -46,11 +46,15 @@
                   
                         <div class="">
                             <label><strong>Selecione os Exercicios :</strong></label><br/>
-                            <select class="selectpicker" multiple data-live-search="true" name="Exercicios">
+                            
                                 @foreach ($exercicios as $exercicio)
-                                <option value="{{$exercicio->Nome_Exercicio}}" style="background-color: 	#BA55D3">{{$exercicio->Nome_Exercicio}}</option>
-                                 @endforeach    
-                            </select>
+                               <td> 
+                                   <tr>
+                                       <label> <input type="checkbox" name = "exercicios[]" value="{{$exercicio->id}} " > Grupo : {{  $exercicio->Grupo}} | Nome do Exercicio : {{$exercicio->Nome_Exercicio}}  | Sessoes : {{$exercicio->Sessao}} | Repeticoes : {{$exercicio->Repeticao}} X |  </label>  
+                                   </tr>
+                               </td> 
+                                @endforeach 
+                          
                         </div>
                         
                         <div class="text-center" style="margin-top: 10px;">
