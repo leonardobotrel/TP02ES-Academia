@@ -28,6 +28,7 @@ class CreateMatriculasTable extends Migration
             $table->string('logo')->nullable();
             $table->string('plan_id');
             $table->boolean('Subscription_suspensded')->default(false);
+            $table->json('turmas')->nullable();
             $table->timestamps();
            //$table->foreign('plan_id')->references('id')->on('planos');// O campo PLan id faz referencia ao campo id da tabela planos
         });

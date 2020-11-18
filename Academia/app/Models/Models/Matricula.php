@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Matricula extends Model
 {
     use HasFactory;
-    protected $fillable = ['Nome','RG','Email','Telefone','plan_id','bandeira','idExame','CPF','Data_Nascimento','Numero_cartao','Nome_Dono_Cartao','logo','subscription_plan','Subscription_suspensded'];
+    protected $fillable = ['turmas','Nome','RG','Email','Telefone','plan_id','bandeira','idExame','CPF','Data_Nascimento','Numero_cartao','Nome_Dono_Cartao','logo','subscription_plan','Subscription_suspensded'];
+    protected $casts = [
+        'turmas'=>'array'
+    ];
     public function pesquisar($filter = null){
         $results = $this
                         ->where('Nome','LIKE',"%{$filter}%")
