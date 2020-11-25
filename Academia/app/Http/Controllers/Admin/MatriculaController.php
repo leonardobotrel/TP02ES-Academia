@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Models\Matricula;
 use App\Models\Models\Plano;
+use App\Models\Models\Turma;
 use App\Models\User;
 use App\Models\Models\AptidaoFisica;
 class MatriculaController extends Controller
@@ -37,7 +38,8 @@ class MatriculaController extends Controller
     {
         $plan = Plano::all();
         $user = User::all();
-        return view ('criar_matricula', compact('plan','user'));
+        $turmas = Turma::all();
+        return view ('criar_matricula', compact('plan','user','turmas'));
     }
 
     /**

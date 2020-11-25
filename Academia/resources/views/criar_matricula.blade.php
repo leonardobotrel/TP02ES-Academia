@@ -63,8 +63,23 @@
                         <option value="{{$plano->Nome}}" style="background-color: 	#BA55D3">{{$plano->Nome}}</option>
                     @endforeach                            
                 </select>
+                
                 <div class="valid-feedback">Válido</div>
                 <div class="invalid-feedback">Por favor preencha este campo</div>
+            </div>
+            <div class="">
+                <label><strong>Selecione as Turmas :</strong></label><br/>
+                
+                    @foreach ($turmas as $turma)
+                         @if ($turma->Modalidade == "plan_id")    
+                                <td> 
+                                <tr>
+                                    <label> <input type="checkbox" name = "turma[]" value="{{$turma->id}} " > Horario Inicio : {{  $turma->Horario_Inicio}} | Modalidade : {{$turma->Modalidade}}  | Professor : {{$turma->Professor}} | Dia : {{$turma->Dia}}  |  </label>  
+                                </tr>
+                                </td> 
+                        @endif
+                    @endforeach 
+              
             </div>
             <div class="form-group">
                <button type= "submit" class ="btn btn-dark"> Salvar</button>
