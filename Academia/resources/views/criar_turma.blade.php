@@ -21,10 +21,6 @@
                           @endforeach                            
                       </datalist>
                   </div>
-                  <div class="form-group">
-                    <label >Numero da Turma:</label>
-                    <input type="integer" name="Turma" class="form-control" placeholder="Numero da Turma:">
-                </div>
                 <div class="form-group">
                     <label for="Dia">Dia</label>
                     <input  type="text" class="form-control" list="Dia" required name="Dia"placeholder="Entre com o Dia da Semana" >
