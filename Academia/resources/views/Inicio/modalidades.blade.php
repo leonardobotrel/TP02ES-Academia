@@ -55,8 +55,8 @@
 							<div class="body-box">
 								<div class="title">Ritmos</div>
 								<div class="detail">
-									<div class="col"><i class="fa fa-clock-o"></i> 15:00 PM</div>
-									<div class="col"><i class="fa fa-calendar-o"></i>Mon, Sun, Wed, Fri</div>
+									<div class="col"><i class="fa fa-clock-o"></i> Consulte Horarios</div>
+									<div class="col"><i class="fa fa-calendar-o"></i>TODOS OS DIAS</div>
 								</div>
 							</div>
 						</div>
@@ -71,8 +71,8 @@
 							<div class="body-box">
 								<div class="title">Natacao</div>
 								<div class="detail">
-									<div class="col"><i class="fa fa-clock-o"></i> 15:00 PM</div>
-									<div class="col"><i class="fa fa-calendar-o"></i>Mon, Sun, Wed, Fri</div>
+									<div class="col"><i class="fa fa-clock-o"></i> Consulte Horarios</div>
+									<div class="col"><i class="fa fa-calendar-o"></i>TODOS OS DIAS</div>
 								</div>
 							</div>
 						</div>
@@ -87,7 +87,7 @@
 							<div class="body-box">
 								<div class="title">SPINNING</div>
 								<div class="detail">
-									<div class="col"><i class="fa fa-clock-o"></i> 15:00 PM</div>
+									<div class="col"><i class="fa fa-clock-o"></i> Consulte Horarios</div>
 									<div class="col"><i class="fa fa-calendar-o"></i>TODOS OS DIAS</div>
 								</div>
 							</div>
@@ -135,15 +135,6 @@
 		<div class="content-wrap">
 			<div class="container">
 
-				<div class="row">
-
-					<div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-						<div class="text-center">
-							<h2 class="text-primary"><em>GET FIT IN LESS 2 WEEKS WITH FITX</em></h2>
-							<p class="mb-5">Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, tempor posuere ligula varius impedit enim tempor sapien</p>
-							<a href="#" class="btn btn-primary">CONTACT NOW</a>
-						</div>
-					</div>
 
 				</div>
 			</div>

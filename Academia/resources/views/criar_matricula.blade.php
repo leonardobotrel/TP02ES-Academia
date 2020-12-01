@@ -72,7 +72,7 @@
                 @if()
                     @foreach ($turmas as $turma)
                          @if ($turma->Modalidade == "plan_id")    
-                         @if($turma->vagas_ocupadas <='30')
+                         @if ($turma->vagas_ocupadas <='30')
                                 <td> 
                                 <tr>
                                     <label> <input type="checkbox" name = "turma[]" value="{{$turma->id}} " > Horario Inicio : {{  $turma->Horario_Inicio}} | Modalidade : {{$turma->Modalidade}}  | Professor : {{$turma->Professor}} | Dia : {{$turma->Dia}}  |  </label>  
