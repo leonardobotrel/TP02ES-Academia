@@ -68,21 +68,29 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($Treinos->exercicios as $Treinos)
-                <tr>
-                    <td>{{$exercicio->id->$Treinos}}</td>
-                    <td>{{$Treinos->usuario->Nome_Exercicio}}</td>
-                    <td>{{$Treinos->usuario->Sessao}}</td>
-                    <td>{{$Treinos->usuario->Repetica}}</td>
-                    <form action="{{route('treino.deletar' ,$Treinos->id)}}" method="POST" >
-                        @csrf
-                        @method('DELETE')
-                        <td>
-                            <button type="submit" class="btn btn -danger tim-icons icon-simple-remove"></button>
-                        </td>
-                    </form>
-                </tr>
-                @endforeach
+                @foreach ($Treinos as $Treino) 
+                    @foreach ($Treino->exercicios as $a)
+                      @foreach ($exercicio as $dado)
+                                @if($dado->id==$a)
+                                        <tr>
+                                            <td>{{ $dado->Grupo}}</td>
+                                            <td>{{ $dado->Nome_Exercicio}}</td>
+                                            <td>{{ $dado->Sessao}}</td>
+                                            <td>{{ $dado->Repeticao}}</td>
+                                            <form action="{{route('treino.deletar' ,$Treinos->id)}}" method="POST" >
+                                                @csrf
+                                                @method('DELETE')
+                                                <td>
+                                                    <button type="submit" class="btn btn -danger tim-icons icon-simple-remove"></button>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                @endif
+                        @endforeach
+                    @endforeach                
+            @endforeach
+                   
+       
             </tbody>
         </table>
     </div>
