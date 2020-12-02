@@ -55,21 +55,21 @@
             </li>
             <li @if ($pageSlug ?? '' == 'icons') class="active " @endif>
                 <a href="{{ route('matriculas.index') }}">
-                    <i class="tim-icons icon-notes"></i>
+                    <i class="tim-icons icon-calendar-60"></i>
                     <p>{{ __('Realizar Matricula') }}</p>
                     
                 </a>
             </li>
             <li @if ($pageSlug ?? '' == 'icons') class="active " @endif>
                 <a href="{{ route('exercicios.create') }}">
-                    <i class="tim-icons icon-notes"></i>
+                    <i class="fas fa-spinner fa-pulse	"></i>
                     <p>{{ __('Criar  Exercicios') }}</p>
                     
                 </a>
             </li>
             <li @if ($pageSlug ?? '' == 'icons') class="active " @endif>
                 <a href="{{ route('modalidade.criar') }}">
-                    <i class="tim-icons icon-notes"></i>
+                    <i class="fas fa-adjust"></i>
                     <p>{{ __('Criar  Modalidades') }}</p>
                     
                 </a>

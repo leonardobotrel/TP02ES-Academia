@@ -9,6 +9,7 @@
 
 @section('content')
 
+@if (Auth::user()->tipoPessoa == 2)    
 <h1>Perfis <a href="{{route ('profiles.create')}}" class = "btn btn-dark">Adicionar Perfil</a></h1>
 
 <div class="card-body">
@@ -51,7 +52,9 @@
         </table>
     </div>
 
-</div> @endsection
+</div> 
+@endif
+@endsection
 
 @push('js')
     <script src="{{ asset('black') }}/js/plugins/chartjs.min.js"></script>
