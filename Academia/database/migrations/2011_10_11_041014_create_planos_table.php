@@ -20,7 +20,6 @@ class CreatePlanosTable extends Migration
             $table->integer('Frequencia');
             $table->double('preco',10,2);
             $table->string('descricao')->nullable();
-            $table->integer('Periodo')->nullable();
             $table->timestamps();
         });
     }

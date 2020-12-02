@@ -21,10 +21,7 @@
                 <label >Preco:</label>
                 <input type="double" name="preco" class="form-control" placeholder="Preco:">
             </div>
-            <div class="form-group">
-                <label >Periodo:</label>
-                <input type="integer" name="Periodo" class="form-control" placeholder="Periodo:">
-            </div>
+         
             <div class="form-group">
                 <label >Descricao:</label>
                 <input type="text" name="descricao" class="form-control" placeholder="Descricao:">
