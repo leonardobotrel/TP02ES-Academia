@@ -50,6 +50,28 @@
                 <a href="{{ route('aptidao.index') }}">
                     <i class="tim-icons icon-notes"></i>
                     <p>{{ __('Exame Físico') }}</p>
+
+                </a>
+            </li>
+            <li @if ($pageSlug ?? '' == 'icons') class="active " @endif>
+                <a href="{{ route('matriculas.index') }}">
+                    <i class="tim-icons icon-notes"></i>
+                    <p>{{ __('Realizar Matricula') }}</p>
+                    
+                </a>
+            </li>
+            <li @if ($pageSlug ?? '' == 'icons') class="active " @endif>
+                <a href="{{ route('exercicios.create') }}">
+                    <i class="tim-icons icon-notes"></i>
+                    <p>{{ __('Criar  Exercicios') }}</p>
+                    
+                </a>
+            </li>
+            <li @if ($pageSlug ?? '' == 'icons') class="active " @endif>
+                <a href="{{ route('modalidade.criar') }}">
+                    <i class="tim-icons icon-notes"></i>
+                    <p>{{ __('Criar  Modalidades') }}</p>
+                    
                 </a>
             </li>
         </ul>

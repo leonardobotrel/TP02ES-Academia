@@ -20,6 +20,7 @@
          </form>
       
     </div> -->
+    @if (Auth::user()->tipoPessoa == 2)
     <div class="card-body">
         <table class="table table-condensed">
             <thead>
@@ -47,6 +48,7 @@
     </div>
 
 </div>
+@endif
 @endsection
 
 @push('js')

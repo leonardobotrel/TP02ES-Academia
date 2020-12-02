@@ -1,10 +1,12 @@
 @extends('layouts.app', ['pageSlug' => 'Criar_modalidade'])
 @section('title','Cadastrar Novo modalidade')
 @section('content_header')
-<h1>Cadastrar Nova modalidade <a href="{{route ('modalidade.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
 
 @endsection
 @section('content')
+@if (Auth::user()->tipoPessoa == 2)   
+<h1>Cadastrar Nova modalidade <a href="{{route ('modalidade.criar')}}" class = "btn btn-dark">Adicionar</a></h1>
+
 <div class="card">
     <div class="card-body">
     <form action="{{route('modalidade.salvar')}}" class="form" method='POST'>
@@ -34,6 +36,7 @@
         </form>
     </div>
 </div>
+@endif
 @endsection
 
 @push('js')

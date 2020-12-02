@@ -4,6 +4,7 @@
 
 @endsection
 @section('content')
+@if (Auth::user()->tipoPessoa == 2)   
 <div class="card">
     <div class="card-body">
           <form action="{{route('exercicios.store')}}" class="form" method='POST'>
@@ -45,6 +46,7 @@
             </form>
     </div>
 </div>
+@endif
 @endsection
 
 @push('js')
