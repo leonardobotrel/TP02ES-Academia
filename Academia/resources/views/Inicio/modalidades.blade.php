@@ -8,7 +8,22 @@
 
 
 @section('content')
-
+<style>
+	body {
+		position: relative;
+	}
+	body::before {    
+		content: "";
+		background-image: url("{{ asset('black') }}/img/FITNESS(17).png");
+		background-size: cover;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		opacity: 0.2;
+	}
+</style>
 	<!-- LOAD PAGE -->
 	<div class="animationload">
 		<div class="loader"></div>
