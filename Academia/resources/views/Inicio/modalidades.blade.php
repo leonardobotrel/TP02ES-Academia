@@ -14,16 +14,18 @@
 	}
 	body::before {    
 		content: "";
-		background-image: url("{{ asset('black') }}/img/FITNESS(17).png");
-		background-size: cover;
+		background-image: url("{{ asset('black') }}/img/cROSSfIT.jpg");
+		background-size:  unset;
 		position: absolute;
 		top: 0px;
 		right: 0px;
 		bottom: 0px;
 		left: 0px;
-		opacity: 0.2;
+		opacity: 0.1;
 	}
 </style>
+<body>
+
 	<!-- LOAD PAGE -->
 	<div class="animationload">
 		<div class="loader"></div>
@@ -189,6 +191,7 @@
 		</div>
 		
 	</div>
+</body>
 	
 	<!-- JS VENDOR -->
 	<script src="js/vendor/jquery.min.js"></script>
