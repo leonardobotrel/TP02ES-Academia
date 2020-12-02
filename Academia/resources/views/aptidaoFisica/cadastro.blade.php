@@ -79,11 +79,11 @@
                 <label >Situação:</label>
                 <div class=" form-check form-check-inline">
                     <label class="form-check-label">Não habilitado </label>
-                    <input type="radio" class="form-check-input" name="Situacao" value=1 checked="checked" required/>
+                    <input type="radio" class="form-check-input" name="Habilitado" value=1 checked="checked" required/>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">Habilitado </label>
-                    <input type="radio" class="form-check-input" name="Situacao" value=2 require/>
+                    <input type="radio" class="form-check-input" name="Habilitado" value=2 require/>
                 </div>
             </div> 
             <div class="form-group">

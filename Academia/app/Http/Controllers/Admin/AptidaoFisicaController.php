@@ -51,8 +51,9 @@ class AptidaoFisicaController extends Controller
         $add->gordura = $dados->Gordura;
         $add->massaMagra = $dados->MassaMagra;
         $add->imc = $dados->IMC;
-        $add->habilitado = $dados->Situacao;
+        $add->habilitado = $dados->Habilitado;
         $add->name = $dados->name;
+        $add->Situacao = $dados->Situacao;
         $add->save();
         
         return redirect()->route('aptidao.index');
