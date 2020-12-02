@@ -16,6 +16,7 @@
                 <th>Percentual de Gordura (%)</th>
                 <th>Percentual Massa Magra (%)</th>
                 <th>IMC</th>
+                <th>Situacao IMC</th>
                 <th>Situação</th>
             </tr>
         </thead>
@@ -30,6 +31,7 @@
                     <td>{{$aptidao->gordura}}</td>
                     <td>{{$aptidao->massaMagra}}</td>
                     <td>{{$aptidao->imc}}</td>
+                    <td>{{$aptidao->Situacao}}</td>
                     <td>
                         @if($aptidao->habilitado == 1)
                             {{$aptidao->habilitado = 'Não habilitado'}}

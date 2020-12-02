@@ -20,6 +20,7 @@ class CreateAptidaoFisicasTable extends Migration
             $table->double('peso');
             $table->double('altura');
             $table->string('pressao');
+            $table->string('Situacao');
             $table->integer('gordura');
             $table->integer('massaMagra');
             $table->double('imc');

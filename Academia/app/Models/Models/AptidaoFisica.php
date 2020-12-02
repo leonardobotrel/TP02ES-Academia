@@ -9,7 +9,7 @@ class AptidaoFisica extends Model
 {
     protected $table = 'aptidao_fisicas';
 
-    protected $fillable = ['user','name','peso','altura','pressao','gordura','massaMagra','imc','habilitado'];
+    protected $fillable = ['user','name','peso','altura','pressao','gordura','massaMagra','imc','habilitado','Situacao'];
 
     public function usuario()
     {

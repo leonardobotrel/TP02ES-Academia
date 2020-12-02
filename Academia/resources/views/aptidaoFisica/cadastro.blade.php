@@ -70,6 +70,12 @@
                 <div class="invalid-feedback">Por favor preencha este campo</div>
             </div> 
             <div class="form-group">
+                <label >Situacao:</label>
+                <input type="double" name="Situacao" class="form-control" placeholder="Situacao IMC" required>
+                <div class="valid-feedback">Válido</div>
+                <div class="invalid-feedback">Por favor preencha este campo</div>
+            </div> 
+            <div class="form-group">
                 <label >Situação:</label>
                 <div class=" form-check form-check-inline">
                     <label class="form-check-label">Não habilitado </label>
