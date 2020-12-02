@@ -21,9 +21,9 @@ class CreateMatriculasTable extends Migration
             $table->string('Telefone');
             $table->string('bandeira');
             $table->integer('idExame')->nullable();
-            $table->integer('CPF');
+            $table->bigInteger('CPF');
             $table->date('Data_Nascimento');
-            $table->integer('Numero_Cartao');
+            $table->bigInteger('Numero_Cartao');
             $table->string('Nome_Dono_Cartao');
             $table->string('logo')->nullable();
             $table->string('plan_id');

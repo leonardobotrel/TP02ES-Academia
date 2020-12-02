@@ -16,7 +16,6 @@ class CreateTurmasTable extends Migration
         Schema::create('turmas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->bigIncrements('Turma');//Numero da turma desejada.
             $table->string('Modalidade');//Sera mostrado um array com todas modalidades para escolher qual modalidade a turma pertence.
             $table->time('Horario_Inicio');//Define o horario de inicio da turma
             $table->time('Horario_Fim');//Defini o horario de termino desta turma

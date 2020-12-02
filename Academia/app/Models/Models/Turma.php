@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Turma extends Model
 {
     protected $fillable = ['turma','Modalidade','Horario_Inicio','Horario_Fim','QtdVagasTotal','Professor','Disponivel','Dia','vagas_ocupadas'];
+    protected $casts = [
+        'turma'=>'array'
+    ];
 }

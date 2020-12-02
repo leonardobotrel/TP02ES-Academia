@@ -68,7 +68,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($Treinos as $Treino) 
+                @foreach ($Treinos as $Treino)
                     @foreach ($Treino->exercicios as $a)
                       @foreach ($exercicio as $dado)
                                 @if($dado->id==$a)
@@ -77,7 +77,7 @@
                                             <td>{{ $dado->Nome_Exercicio}}</td>
                                             <td>{{ $dado->Sessao}}</td>
                                             <td>{{ $dado->Repeticao}}</td>
-                                            <form action="{{route('treino.deletar' ,$Treinos->id)}}" method="POST" >
+                                            <form action="{{route('treino.deletar' ,$Treino->id)}}" method="POST" >
                                                 @csrf
                                                 @method('DELETE')
                                                 <td>

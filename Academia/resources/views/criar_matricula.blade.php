@@ -68,24 +68,33 @@
                 <div class="invalid-feedback">Por favor preencha este campo</div>
             </div>
             <div class="">
-                <label><strong>Selecione as Turmas :</strong></label><br/>
-                @if()
+                <label>Selecione as Turmas :</label><br/>
+        
                     @foreach ($turmas as $turma)
-                         @if ($turma->Modalidade == "plan_id")    
-                         @if ($turma->vagas_ocupadas <='30')
-                                <td> 
-                                <tr>
-                                    <label> <input type="checkbox" name = "turma[]" value="{{$turma->id}} " > Horario Inicio : {{  $turma->Horario_Inicio}} | Modalidade : {{$turma->Modalidade}}  | Professor : {{$turma->Professor}} | Dia : {{$turma->Dia}}  |  </label>  
-                                </tr>
-                                </td>                 
-                        @endif
-                        @endif
+                         
+                            @if ($turma->vagas_ocupadas <='30')
+                                    <td> 
+                                        <tr>
+                                            <label> <input   onchange="CheckCapacidade($turma->vagas_ocupadas);" type="checkbox" name = "turma[]" value="{{$turma->id}} " > Horario Inicio : {{  $turma->Horario_Inicio}} | Modalidade : {{$turma->Modalidade}}  | Professor : {{$turma->Professor}} | Dia : {{$turma->Dia}}  |  </label>  
+                                        </tr>
+                                    </td>                 
+                            @endif
+                    
                     @endforeach 
               
             </div>
             <div class="form-group">
                <button type= "submit" class ="btn btn-dark"> Salvar</button>
         </form>
+        
+        <script>
+            // Disable form submissions if there are invalid fields
+            (function() {
+                function CheckCapacidade($turma->vagas_ocupadas) {
+                $turma->vagas_ocupadas->sum('1')
+            }
+
+           </script>
     </div>
 </div>
 @endsection

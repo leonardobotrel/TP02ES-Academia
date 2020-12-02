@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Models\Modalidade;
 use App\Models\Models\Turma;
+use App\Models\Models\Matricula;
 
 class TurmaController extends Controller
 {
@@ -16,10 +17,9 @@ class TurmaController extends Controller
             $this->repository = $turma;
         }
     public function index(){
+        $matricula = Matricula::all();
         $turma =$this->repository->paginate();
-        return view ('turmas',[
-            'turma'=>$turma,
-        ]);
+        return view ('turmas', compact('turma', 'matricula'));
     }
     public function criar(){
         $Modalidade = Modalidade::all();
